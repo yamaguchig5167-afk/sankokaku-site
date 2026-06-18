@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>客室｜白樺湖レイクサイドホテル山幸閣</title>
+<meta name="description" content="白樺湖畔・山幸閣の客室。和室10畳・最大10名のグループ向け和室・和洋室・ツインルーム。全室ユニットバス・トイレ完備、全室禁煙。一部のお部屋から白樺湖を一望。合宿・団体・ご家族に。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232f5d57'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23b29a63' font-family='serif'%3E山%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="客室｜白樺湖レイクサイドホテル山幸閣">
+<meta property="og:description" content="和室10畳・最大10名のグループ向け和室・和洋室・ツイン。全室ユニットバス・トイレ完備、全室禁煙。一部のお部屋から白樺湖を一望。">
+<meta property="og:image" content="https://sankokaku.com/wp/wp-content/uploads/2024/06/top-room.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b2826;--ink-soft:#33433f;--paper:#f6f3ec;--paper-2:#efe9dd;
+  --teal:#2f5d57;--teal-light:#4f827a;--gold:#b29a63;--ember:#d8743f;
+  --text:#2b2a26;--muted:#6f6b62;
+  --serif-en:'Cormorant Garamond',serif;--serif-jp:'Shippori Mincho',serif;
+  --sans-jp:'Noto Sans JP',sans-serif;--label:'Jost',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans-jp);color:var(--text);background:var(--paper);line-height:1.9;font-weight:300;letter-spacing:.04em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.label{font-family:var(--label);text-transform:uppercase;letter-spacing:.35em;font-size:.7rem;font-weight:400}
+.wrap{width:min(1180px,90%);margin-inline:auto}
+section{position:relative}
+section[id]{scroll-margin-top:88px}
+h1,h2,h3,h4,h5,.jp-title,.brand .jp{font-feature-settings:"palt"}
+
+/* トップバー */
+.topbar{background:var(--ink);color:#d9d4c7;font-size:.72rem;display:flex;justify-content:space-between;align-items:center;padding:.5rem max(5vw,1rem);letter-spacing:.16em;font-family:var(--label)}
+.topbar .loc{opacity:.85}
+.topbar .tel b{color:#fff;font-size:.85rem;letter-spacing:.1em}
+/* ヘッダー */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .5s,padding .5s,box-shadow .5s;padding:1.3rem max(5vw,1.5rem)}
+header.scrolled{background:rgba(246,243,236,.96);backdrop-filter:blur(8px);padding:.8rem max(5vw,1.5rem);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.brand{display:flex;flex-direction:column;line-height:1.1}
+.brand .jp{font-family:var(--serif-jp);font-weight:600;font-size:1.12rem;letter-spacing:.14em;color:#fff}
+.brand .sub{font-family:var(--label);font-size:.56rem;letter-spacing:.3em;color:#e7e2d5;margin-top:.35rem;text-transform:uppercase}
+header.scrolled .brand .jp{color:var(--ink)}
+header.scrolled .brand .sub{color:var(--teal)}
+nav.main{display:flex;gap:1.9rem;align-items:center}
+nav.main a{font-family:var(--serif-jp);font-size:.9rem;color:#fff;letter-spacing:.08em;position:relative}
+nav.main a.cur{color:var(--gold)}
+nav.main a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width .4s}
+nav.main a:hover::after,nav.main a.cur::after{width:100%}
+header.scrolled nav.main a{color:var(--ink-soft)}
+header.scrolled nav.main a.cur{color:var(--teal)}
+.btn-reserve{font-family:var(--label);letter-spacing:.18em;font-size:.74rem;text-transform:uppercase;border:1px solid rgba(255,255,255,.6);color:#fff;padding:.7rem 1.4rem;border-radius:2px;transition:.4s;white-space:nowrap}
+.btn-reserve:hover{background:var(--ember);border-color:var(--ember)}
+header.scrolled .btn-reserve{border-color:var(--teal);color:var(--teal)}
+header.scrolled .btn-reserve:hover{background:var(--ember);border-color:var(--ember);color:#fff}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:120}
+.hamburger span{width:26px;height:1.5px;background:#fff;transition:.3s}
+header.scrolled .hamburger span{background:var(--ink)}
+
+/* ヒーロー */
+.hero{height:74vh;min-height:480px;position:relative;overflow:hidden;display:flex;align-items:center}
+.hero .bg{position:absolute;inset:0;background:url('https://sankokaku.com/wp/wp-content/uploads/2024/06/top-room.webp') center/cover no-repeat;transform:scale(1.06);animation:kb 16s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,20,26,.78) 0%,rgba(12,20,26,.45) 55%,rgba(12,20,26,.15) 100%)}
+.hero .hc{position:relative;z-index:2;color:#fff;padding-top:3rem}
+.crumb{font-family:var(--label);font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:#e7dfc8;margin-bottom:1.3rem;opacity:0;animation:fu 1s .2s forwards}
+.crumb a{opacity:.8}
+.hero h1{font-family:var(--serif-jp);font-weight:600;font-size:clamp(2rem,5vw,3.6rem);letter-spacing:.12em;line-height:1.5;text-shadow:0 2px 30px rgba(0,0,0,.4);opacity:0;animation:fu 1.2s .45s forwards}
+.hero h1 small{display:block;font-size:.36em;letter-spacing:.2em;margin-top:1.2rem;font-weight:300;opacity:.92;font-family:var(--sans-jp)}
+.hero .heq{font-family:var(--serif-en);font-style:italic;font-size:clamp(1rem,2vw,1.4rem);color:#e7dfc8;margin-top:1.1rem;opacity:0;animation:fu 1.2s .75s forwards}
+@keyframes fu{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* 見出し共通 */
+.sec-head{text-align:center;margin-bottom:3.2rem}
+.sec-head .en-title{font-family:var(--serif-en);font-size:clamp(2.2rem,4.6vw,3.3rem);color:var(--teal);font-weight:500;line-height:1}
+.sec-head.light .en-title{color:#e7dfc8}
+.sec-head .jp-title{font-family:var(--serif-jp);font-size:.9rem;letter-spacing:.38em;color:var(--muted);margin-top:1rem}
+.divider{width:40px;height:1px;background:var(--gold);margin:1.3rem auto 0}
+
+/* イントロ＋特長バッジ */
+.intro{padding:6rem 0 4rem;text-align:center}
+.intro .label{color:var(--gold);display:block;margin-bottom:1.6rem}
+.intro h2{font-family:var(--serif-jp);font-weight:500;font-size:clamp(1.4rem,3vw,2rem);line-height:2;letter-spacing:.1em;color:var(--ink)}
+.intro p{max-width:640px;margin:1.8rem auto 0;color:var(--muted);font-size:.93rem;line-height:2.4}
+.feat-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin-top:2.4rem}
+.feat-pills span{border:1px solid var(--gold);color:var(--teal);border-radius:30px;padding:.55rem 1.2rem;font-family:var(--serif-jp);font-size:.84rem;letter-spacing:.04em}
+
+/* 客室（交互レイアウト＋スペック表） */
+.rooms{padding:3rem 0 6rem}
+.room{display:grid;grid-template-columns:1.12fr 1fr;align-items:center;margin-bottom:4.5rem}
+.room:last-child{margin-bottom:0}
+.room .im{position:relative;overflow:hidden;aspect-ratio:16/11;border-radius:3px}
+.room .im img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.room:hover .im img{transform:scale(1.05)}
+.room .im .vtag{position:absolute;top:1rem;left:1rem;background:var(--teal);color:#fff;font-family:var(--label);font-size:.6rem;letter-spacing:.16em;padding:.4rem .8rem;text-transform:uppercase}
+.room .tx{padding:0 3.5rem}
+.room.rev .im{order:2}.room.rev .tx{order:1}
+.room .no{font-family:var(--serif-en);font-style:italic;color:var(--gold);font-size:1.1rem}
+.room h3{font-family:var(--serif-jp);font-weight:600;font-size:clamp(1.5rem,2.6vw,2.05rem);letter-spacing:.06em;margin:.4rem 0 .3rem;color:var(--ink);line-height:1.5}
+.room .en-sub{font-family:var(--serif-en);font-style:italic;color:var(--teal-light);font-size:1rem;margin-bottom:1.2rem}
+.room p{color:var(--muted);font-size:.9rem;line-height:2.2;margin-bottom:1.4rem}
+.spec{width:100%;border-top:1px solid #e0d8c8;font-size:.86rem}
+.spec div{display:flex;border-bottom:1px solid #e0d8c8;padding:.7rem .2rem}
+.spec dt{width:88px;font-family:var(--serif-jp);color:var(--teal);font-weight:500;flex-shrink:0}
+.spec dd{color:var(--ink-soft)}
+
+/* 備品・アメニティ */
+.equip{padding:6rem 0;background:var(--ink);color:#fff}
+.eq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:3rem}
+.eq-card{background:#22312e;border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:2.2rem}
+.eq-card h3{font-family:var(--serif-jp);font-weight:600;font-size:1.15rem;letter-spacing:.06em;margin-bottom:1.1rem;color:#fff;display:flex;align-items:center;gap:.6rem}
+.eq-card .tag{font-family:var(--label);font-size:.58rem;letter-spacing:.16em;color:var(--ember);border:1px solid var(--ember);border-radius:3px;padding:.15rem .45rem;text-transform:uppercase}
+.eq-card ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem}
+.eq-card li{font-size:.84rem;color:rgba(255,255,255,.84);background:rgba(255,255,255,.06);border-radius:4px;padding:.4rem .8rem}
+.eq-card p.note{font-size:.8rem;color:rgba(255,255,255,.6);line-height:1.9;margin-top:1rem}
+
+/* ご利用にあたって */
+.notes{padding:6rem 0;background:var(--paper-2)}
+.notes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem 2.5rem;max-width:920px;margin:2.6rem auto 0}
+.notes-grid li{list-style:none;font-size:.88rem;color:var(--ink-soft);line-height:1.8;padding:.7rem 0 .7rem 1.6rem;position:relative;border-bottom:1px solid #e2dac9}
+.notes-grid li::before{content:"※";position:absolute;left:0;color:var(--gold)}
+
+/* CTA */
+.cta{padding:6rem 0;text-align:center;position:relative;overflow:hidden;color:#fff}
+.cta .bg{position:absolute;inset:0;background:url('https://sankokaku.com/wp/wp-content/uploads/2024/06/PhotoGallery-9.webp') center/cover no-repeat}
+.cta::after{content:"";position:absolute;inset:0;background:rgba(16,26,24,.7)}
+.cta .in{position:relative;z-index:2}
+.cta h2{font-family:var(--serif-jp);font-weight:500;font-size:clamp(1.5rem,3.2vw,2.2rem);letter-spacing:.1em;line-height:1.8;margin-bottom:1.8rem}
+.cta .btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.cta .btn-lg{font-family:var(--label);letter-spacing:.2em;text-transform:uppercase;font-size:.82rem;padding:1.1rem 2.4rem;transition:.4s}
+.cta .btn-lg.primary{background:var(--ember);color:#fff}
+.cta .btn-lg.primary:hover{background:#fff;color:var(--ink)}
+.cta .btn-lg.ghost{border:1px solid rgba(255,255,255,.7);color:#fff}
+.cta .btn-lg.ghost:hover{background:#fff;color:var(--ink)}
+
+/* フッター */
+footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3rem;padding-bottom:2.6rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-brand .jp{font-family:var(--serif-jp);font-size:1.25rem;color:#fff;letter-spacing:.12em;font-weight:600}
+.foot-brand .en{font-family:var(--label);font-size:.6rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-top:.6rem;display:block}
+.foot-brand address{font-style:normal;margin-top:1.4rem;line-height:2;color:#9ba39f}
+.foot-col h5{font-family:var(--serif-jp);color:#fff;font-size:.88rem;letter-spacing:.14em;margin-bottom:1.1rem;font-weight:500}
+.foot-col a{display:block;padding:.38rem 0;color:#9ba39f;transition:color .3s}
+.foot-col a:hover{color:var(--gold)}
+.foot-bottom{display:flex;justify-content:space-between;padding-top:1.8rem;font-family:var(--label);font-size:.64rem;letter-spacing:.18em;color:#6b736f;flex-wrap:wrap;gap:1rem}
+
+.reveal{opacity:0;transform:translateY(38px);transition:opacity 1s,transform 1s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.hero .bg{animation:none;transform:none}.reveal{opacity:1!important;transform:none!important}}
+
+@media(max-width:900px){
+  .hamburger{display:flex}
+  nav.main{position:fixed;inset:0;background:rgba(20,29,27,.98);flex-direction:column;justify-content:center;gap:2rem;transform:translateX(100%);transition:transform .5s;backdrop-filter:blur(6px)}
+  nav.main.open{transform:none}
+  nav.main a{color:#fff;font-size:1.2rem}
+  header.scrolled nav.main a{color:#fff}
+  .btn-reserve{display:none}
+  .room{grid-template-columns:1fr;margin-bottom:3.2rem}
+  .room .tx{padding:1.8rem 0 0}
+  .room.rev .im,.room.rev .tx{order:0}
+  .eq-grid{grid-template-columns:1fr}
+  .notes-grid{grid-template-columns:1fr;gap:0}
+  .foot-top{grid-template-columns:1fr;gap:2rem}
+  .topbar .loc{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="loc">信州・白樺湖畔 標高1,400m｜合宿・団体・サプライズ演出の宿</span>
+  <span class="tel">ご予約・お問い合わせ <b>0266-68-2021</b></span>
+</div>
+
+<header id="header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="jp">山幸閣</span><span class="sub">Shirakabako Lakeside Hotel</span></a>
+    <nav class="main" id="nav">
+      <a href="index.html#surprise">サプライズ演出</a>
+      <a href="index.html#camp">合宿・団体</a>
+      <a href="maxhub.html">ミーティングルーム</a>
+      <a href="rooms.html" class="cur">客室</a>
+      <a href="index.html#info">アクセス</a>
+    </nav>
+    <a href="#cta" class="btn-reserve">ご予約・相談</a>
+    <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="bg"></div>
+  <div class="hc wrap">
+    <div class="crumb"><a href="index.html">TOP</a> ／ Guest Rooms</div>
+    <h1>窓辺に、白樺湖。<small>和の寛ぎを、湖畔で。全65室の客室</small></h1>
+    <div class="heq">— rooms that open to the lake —</div>
+  </div>
+</section>
+
+<!-- イントロ -->
+<section class="intro reveal">
+  <div class="wrap">
+    <span class="label">Guest Rooms</span>
+    <h2>和室を中心に、<br>湖を望むお部屋を。</h2>
+    <p>全室ユニットバス・トイレ完備の和室を中心に、和洋室・ツインルームをご用意。一部のお部屋からは、眼下に広がる白樺湖をお楽しみいただけます。ご家族から、最大10名の大人数グループ・合宿まで。</p>
+    <div class="feat-pills">
+      <span>全室ユニットバス・トイレ完備</span>
+      <span>全室禁煙</span>
+      <span>一部レイクビュー</span>
+      <span>最大10名/室</span>
+    </div>
+  </div>
+</section>
+
+<!-- 客室タイプ -->
+<section class="rooms" id="types">
+  <div class="wrap">
+
+    <div class="room reveal">
+      <div class="im"><img src="https://sankokaku.com/wp/wp-content/uploads/2024/06/top-room.webp" alt="和室10畳"><span class="vtag">Lake / Mt. View</span></div>
+      <div class="tx">
+        <span class="no">01.</span>
+        <h3>和室 10畳</h3>
+        <div class="en-sub">Japanese Room</div>
+        <p>10畳＋広縁付きのスタンダードなお部屋。白樺湖を一望できるお部屋と、車山を眺望できるお部屋をご用意しています。</p>
+        <dl class="spec">
+          <div><dt>広さ</dt><dd>10畳＋広縁</dd></div>
+          <div><dt>定員</dt><dd>1〜5名</dd></div>
+          <div><dt>設備</dt><dd>ユニットバス・トイレ</dd></div>
+          <div><dt>喫煙</dt><dd>禁煙</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="room rev reveal">
+      <div class="im"><img src="https://sankokaku.com/wp/wp-content/uploads/2024/06/PhotoGallery-9.webp" alt="グループ向け和室 20畳"><span class="vtag">Group · 〜10名</span></div>
+      <div class="tx">
+        <span class="no">02.</span>
+        <h3>グループ向け和室 20畳</h3>
+        <div class="en-sub">Group Japanese Room</div>
+        <p>最大10名様までご利用いただける、広々とした20畳の和室。ご家族旅行や合宿・グループ旅行など、大人数でのご利用にぴったりのお部屋です。</p>
+        <dl class="spec">
+          <div><dt>広さ</dt><dd>20畳</dd></div>
+          <div><dt>定員</dt><dd>6〜10名</dd></div>
+          <div><dt>設備</dt><dd>ユニットバス・トイレ</dd></div>
+          <div><dt>喫煙</dt><dd>禁煙</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="room reveal">
+      <div class="im"><img src="https://sankokaku.com/wp/wp-content/uploads/2024/06/plan2.webp" alt="和洋室"><span class="vtag">Japanese-Western</span></div>
+      <div class="tx">
+        <span class="no">03.</span>
+        <h3>和洋室</h3>
+        <div class="en-sub">Japanese-Western Room</div>
+        <p>6畳分の和室と、ツインベッドを備えたお部屋。畳の落ち着きとベッドの快適さを両立。ご夫婦・カップルのお客様におすすめです。</p>
+        <dl class="spec">
+          <div><dt>広さ</dt><dd>6畳＋ツインベッドルーム</dd></div>
+          <div><dt>定員</dt><dd>2〜3名</dd></div>
+          <div><dt>設備</dt><dd>ユニットバス・トイレ</dd></div>
+          <div><dt>喫煙</dt><dd>禁煙</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="room rev reveal">
+      <div class="im"><img src="https://sankokaku.com/wp/wp-content/uploads/2024/06/plan1.webp" alt="ツインルーム"><span class="vtag">Mt. Kuruma View</span></div>
+      <div class="tx">
+        <span class="no">04.</span>
+        <h3>ツインルーム</h3>
+        <div class="en-sub">Twin Room</div>
+        <p>洋風レトロな雰囲気のお部屋。窓からは車山の景色をお楽しみいただけます。お二人・ビジネスでのご利用にも。</p>
+        <dl class="spec">
+          <div><dt>広さ</dt><dd>18㎡</dd></div>
+          <div><dt>定員</dt><dd>1〜2名</dd></div>
+          <div><dt>設備</dt><dd>ユニットバス・トイレ</dd></div>
+          <div><dt>喫煙</dt><dd>禁煙</dd></div>
+        </dl>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 備品・アメニティ -->
+<section class="equip reveal">
+  <div class="wrap">
+    <div class="sec-head light">
+      <div class="en-title">In Your Room</div>
+      <div class="jp-title">客 室 備 品 ・ ア メ ニ テ ィ</div>
+      <div class="divider"></div>
+    </div>
+    <div class="eq-grid">
+      <div class="eq-card">
+        <h3>客室備品</h3>
+        <ul>
+          <li>テレビ</li><li>冷蔵庫</li><li>湯沸かしポット</li><li>個別空調</li><li>金庫</li><li>スリッパ</li><li>リンスインシャンプー</li><li>石鹸</li><li>ボディーソープ</li>
+        </ul>
+      </div>
+      <div class="eq-card">
+        <h3>アメニティ <span class="tag">有料</span></h3>
+        <ul>
+          <li>浴衣</li><li>バスタオル</li><li>フェイスタオル</li><li>歯ブラシ</li>
+        </ul>
+        <p class="note">※素泊まりプランのお客様には付いておりません。ご持参いただくか、フロントにてご購入ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ご利用にあたって -->
+<section class="notes reveal">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en-title">Good to Know</div>
+      <div class="jp-title">ご 利 用 に あ た っ て</div>
+      <div class="divider"></div>
+    </div>
+    <ul class="notes-grid">
+      <li>お支払いは現地にて現金のみ（キャッシュレス決済は非対応）です。</li>
+      <li>お布団敷きは、お客様ご自身でお願いしております。</li>
+      <li>Wi-Fiは本館2〜3階フロアのみご利用いただけます。</li>
+      <li>エレベーターは南館（3〜7階）のみ。本館（1〜3階）は階段のご利用となります。</li>
+      <li>大浴場はご予約のプラン・期間によりご利用いただけない場合があります（温泉ではございません）。</li>
+      <li>客室内へのホットプレート・卓上コンロ類の持込はご遠慮ください。</li>
+      <li>自然豊かな環境のため、客室内に虫が入ることがございます。</li>
+      <li>21時を目安に、館内の一部を消灯いたします。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <div class="bg"></div>
+  <div class="in wrap">
+    <h2>湖畔のお部屋で、<br>忘れられない時間を。</h2>
+    <div class="btns">
+      <a href="tel:0266-68-2021" class="btn-lg primary">電話で予約・相談 0266-68-2021</a>
+      <a href="index.html#info" class="btn-lg ghost">アクセス・お問い合わせ</a>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="jp">白樺湖レイクサイドホテル 山幸閣</div>
+        <span class="en">Shirakabako Lakeside Hotel Sankokaku</span>
+        <address>〒391-0301 長野県茅野市北山3424-1-74<br>TEL 0266-68-2021　FAX 0266-68-2092</address>
+      </div>
+      <div class="foot-col">
+        <h5>ご案内</h5>
+        <a href="rooms.html">客室</a>
+        <a href="maxhub.html">ミーティングルーム</a>
+        <a href="index.html#camp">合宿・団体</a>
+        <a href="index.html#surprise">サプライズ演出</a>
+      </div>
+      <div class="foot-col">
+        <h5>ご予約</h5>
+        <a href="index.html#info">アクセス</a>
+        <a href="index.html#gallery">ギャラリー</a>
+        <a href="#cta">お問い合わせ</a>
+        <a href="tel:0266-68-2021">お電話 0266-68-2021</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Shirakabako Lakeside Hotel Sankokaku.</span>
+      <span>Nagano · Shirakabako · Guest Rooms</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>60));
+const ham=document.getElementById('ham'),nav=document.getElementById('nav');
+ham.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
