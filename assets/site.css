@@ -1,0 +1,31 @@
+/* 山幸閣サイト 共通追加スタイル（既存インラインCSSに追記する横断機能） */
+
+/* モバイル固定CTA */
+.sticky-cta{display:none}
+.sticky-cta a{-webkit-tap-highlight-color:transparent}
+@media(max-width:768px){
+  .sticky-cta{
+    display:flex;position:fixed;left:0;right:0;bottom:0;z-index:300;
+    box-shadow:0 -4px 20px rgba(0,0,0,.18);
+  }
+  .sticky-cta a{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:.4rem;
+    padding:.95rem .5rem;font-family:'Noto Sans JP',sans-serif;font-weight:500;
+    font-size:.92rem;letter-spacing:.02em;text-decoration:none;min-height:56px;
+  }
+  .sticky-cta .sc-tel{background:#2f5d57;color:#fff}
+  .sticky-cta .sc-form{background:#d8743f;color:#fff}
+  /* 固定CTAが本文・フッターを隠さないための余白 */
+  body{padding-bottom:56px}
+}
+
+/* フォーカス可視化（アクセシビリティ・既存を消さず補強） */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
+textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid #d8743f;outline-offset:2px;border-radius:2px;
+}
+
+/* prefers-reduced-motion 共通 */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

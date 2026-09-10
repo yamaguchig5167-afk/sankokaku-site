@@ -11,9 +11,12 @@
 <meta property="og:description" content="ティールーム「エーデルワイス」、コンベンションホール「エトワール」、大広間、大浴場ほか。白樺湖を眺めながら寛ぐ館内施設。">
 <meta property="og:image" content="https://yamaguchig5167-afk.github.io/sankokaku-site/assets/TOP_facility.webp">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://yamaguchig5167-afk.github.io/sankokaku-site/facilities.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "name": "白樺湖レイクサイドホテル山幸閣", "url": "https://yamaguchig5167-afk.github.io/sankokaku-site/", "telephone": "+81-266-68-2021", "faxNumber": "+81-266-68-2092", "image": "https://yamaguchig5167-afk.github.io/sankokaku-site/assets/PhotoGallery-10.webp", "address": {"@type": "PostalAddress", "postalCode": "391-0301", "addressRegion": "長野県", "addressLocality": "茅野市", "streetAddress": "北山3424-1-74", "addressCountry": "JP"}, "checkinTime": "15:00", "checkoutTime": "10:00", "numberOfRooms": 65}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 <style>
 :root{--ink:#1b2826;--ink-soft:#33433f;--paper:#f6f3ec;--paper-2:#efe9dd;--teal:#2f5d57;--teal-light:#4f827a;--gold:#b29a63;--ember:#d8743f;--text:#2b2a26;--muted:#6f6b62;--serif-en:'Cormorant Garamond',serif;--serif-jp:'Shippori Mincho',serif;--sans-jp:'Noto Sans JP',sans-serif;--label:'Jost',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -141,7 +144,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
       <a href="maxhub.html">ミーティングルーム</a>
       <a href="index.html#info">アクセス</a>
     </nav>
-    <a href="#cta" class="btn-reserve">ご予約・相談</a>
+    <a href="contact.html" class="btn-reserve" data-ev="inquiry_cta_click">空室・見積り相談</a>
     <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
   </div>
 </header>
@@ -203,7 +206,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
       </div>
       <div class="fac">
         <div class="ph"><img src="assets/meeting-maxhub.png" alt="ミーティングルーム（MaxHub）"></div>
-        <div class="bd"><span class="en">Meeting Room</span><h3>ミーティングルーム（MaxHub）</h3><p>大画面のオールインワン会議システムを導入予定。研修・合宿の振り返りに。</p><div class="loc"><a href="maxhub.html" style="color:var(--ember)">詳しく見る →</a></div></div>
+        <div class="bd"><span class="en">Meeting Room</span><h3>ミーティングルーム（MaxHub）</h3><p>大画面のオールインワン会議システムを導入済み。研修・合宿の振り返りに。</p><div class="loc"><a href="maxhub.html" style="color:var(--ember)">詳しく見る →</a></div></div>
       </div>
     </div>
   </div>
@@ -271,6 +274,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
       </div>
     </div>
     <div class="foot-bottom">
+      <a href="privacy.html" style="color:#6b736f">プライバシーポリシー</a>
       <span>© Shirakabako Lakeside Hotel Sankokaku.</span>
       <span>Nagano · Shirakabako · Facilities</span>
     </div>
@@ -286,5 +290,12 @@ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classLis
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+
+<!-- モバイル固定CTA -->
+<div class="sticky-cta" aria-label="お問い合わせ">
+  <a class="sc-tel" href="tel:0266-68-2021" data-ev="tel_click">☎ 電話で相談</a>
+  <a class="sc-form" href="contact.html" data-ev="inquiry_cta_click">空室・見積り相談</a>
+</div>
+<script src="assets/site.js"></script>
 </body>
 </html>

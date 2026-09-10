@@ -11,9 +11,12 @@
 <meta property="og:description" content="標高1,400m・信州白樺湖畔。合宿・団体・企業研修に。打ち上げ花火などお客様だけのサプライズ演出で、一生の思い出を創る宿。">
 <meta property="og:image" content="https://yamaguchig5167-afk.github.io/sankokaku-site/assets/PhotoGallery-10.webp">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://yamaguchig5167-afk.github.io/sankokaku-site/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "name": "白樺湖レイクサイドホテル山幸閣", "url": "https://yamaguchig5167-afk.github.io/sankokaku-site/", "telephone": "+81-266-68-2021", "faxNumber": "+81-266-68-2092", "image": "https://yamaguchig5167-afk.github.io/sankokaku-site/assets/PhotoGallery-10.webp", "address": {"@type": "PostalAddress", "postalCode": "391-0301", "addressRegion": "長野県", "addressLocality": "茅野市", "streetAddress": "北山3424-1-74", "addressCountry": "JP"}, "checkinTime": "15:00", "checkoutTime": "10:00", "numberOfRooms": 65}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 <style>
 :root{
   --ink:#1b2826;
@@ -82,6 +85,13 @@ header.scrolled .hamburger span{background:var(--ink)}
 .hero-content h1{font-family:var(--serif-jp);font-weight:600;font-size:clamp(2.1rem,5.4vw,4.2rem);letter-spacing:.12em;line-height:1.55;text-shadow:0 2px 30px rgba(0,0,0,.45);opacity:0;animation:fadeUp 1.4s .7s forwards}
 .hero-content h1 small{display:block;font-size:.4em;letter-spacing:.28em;margin-top:1.5rem;font-weight:300;opacity:.92}
 .hero-en{font-family:var(--serif-en);font-style:italic;font-size:clamp(1rem,2vw,1.5rem);letter-spacing:.1em;color:#e7dfc8;margin-top:1.2rem;opacity:0;animation:fadeUp 1.4s 1s forwards}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.2rem;opacity:0;animation:fadeUp 1.4s 1.2s forwards}
+.hero-cta .hcta{font-family:var(--sans-jp);font-weight:500;font-size:.95rem;letter-spacing:.06em;padding:1rem 2rem;border-radius:3px;transition:.35s;white-space:nowrap}
+.hero-cta .primary{background:var(--ember);color:#fff;box-shadow:0 10px 30px -10px rgba(216,116,63,.6)}
+.hero-cta .primary:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
+.hero-cta .ghost{border:1px solid rgba(255,255,255,.75);color:#fff}
+.hero-cta .ghost:hover{background:#fff;color:var(--ink)}
+.hero-note{margin-top:1.1rem;font-size:.8rem;color:rgba(255,255,255,.82);letter-spacing:.04em;opacity:0;animation:fadeUp 1.4s 1.4s forwards}
 .scroll-cue{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;color:#fff;font-family:var(--label);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;text-align:center}
 .scroll-cue::after{content:"";display:block;width:1px;height:48px;background:rgba(255,255,255,.7);margin:.8rem auto 0;animation:scrolldown 2s infinite}
 @keyframes scrolldown{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.1%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
@@ -354,7 +364,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
       <a href="maxhub.html">ミーティングルーム</a>
       <a href="#info">アクセス</a>
     </nav>
-    <a href="#cta" class="btn-reserve">合宿の相談</a>
+    <a href="contact.html" class="btn-reserve" data-ev="inquiry_cta_click">空室・見積り相談</a>
     <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
   </div>
 </header>
@@ -366,6 +376,11 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
     <span class="label">Memories by the Lake — Shirakabako</span>
     <h1>ここでしか、<br>つくれない思い出がある。<small>合宿と団体の、記憶に残る宿</small></h1>
     <div class="hero-en">— where every stay becomes a story —</div>
+    <div class="hero-cta">
+      <a class="hcta primary" href="contact.html" data-ev="inquiry_cta_click">団体の空室・料金を確認する</a>
+      <a class="hcta ghost" href="tel:0266-68-2021" data-ev="tel_click">☎ 電話で相談</a>
+    </div>
+    <p class="hero-note">日程が未確定でもご相談いただけます　／　相談・お見積り無料</p>
   </div>
   <div class="scroll-cue">Scroll</div>
 </section>
@@ -417,7 +432,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
       <div class="step"><span class="sn">STEP 2</span><h4>演出プランご提案</h4><p>花火・表彰式・記念日…ご要望に合わせた"思い出の設計図"をご提案。</p></div>
       <div class="step"><span class="sn">STEP 3</span><h4>当日、サプライズ</h4><p>仲間の歓声と、忘れられない瞬間を。一生モノの思い出をその手に。</p></div>
     </div>
-    <p class="note">※演出内容は人数・ご予算・時期により異なります。まずはお気軽にご相談ください。</p>
+    <p class="note">※打ち上げ花火は、ホテル前の白樺湖での団体向けオプションです。卒業・優勝・周年・研修の締めくくりに。天候・時期・許可・安全管理等により実施できない場合があり、<strong>要事前相談</strong>です。演出内容は人数・ご予算・時期により異なります。</p>
   </div>
 </section>
 
@@ -523,11 +538,12 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
       <div class="mh-txt">
         <div class="k">Beyond a place to sleep</div>
         <h3>合宿が、もっと"伸びる"場所へ。</h3>
-        <p>大画面のオールインワン会議システム「MaxHub」を、ミーティングルームとロビーに導入予定。"集まって学ぶ・高め合う"を、ぐっと快適に。ただ泊まるだけでない、成果につながる合宿を。</p>
+        <p>大画面のオールインワン会議システム「<strong>MaxHub 55型</strong>」を、ミーティングルームとロビーに導入済み。"集まって学ぶ・高め合う"を、ぐっと快適に。ただ泊まるだけでない、成果につながる合宿を。</p>
         <ul class="mh-list">
           <li>🏐 スポーツ合宿 ― プレー映像をその場で大画面再生・動作チェック</li>
           <li>🎓 ゼミ・研修 ― ワイヤレスでプレゼン・資料を即共有</li>
           <li>🌐 企業合宿・ワーケーション ― Web会議／オンライン研修にも対応</li>
+          <li>🫧 スポーツ合宿の回復に ― <strong>O2ドクター 酸素カプセル</strong>でコンディショニング（利用条件は要相談）</li>
         </ul>
         <a class="link-more" href="maxhub.html">MaxHubのページを詳しく見る</a>
       </div>
@@ -737,7 +753,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
         <dl>
           <dt>所在地</dt><dd>〒391-0301　長野県茅野市北山3424-1-74</dd>
           <dt>客室数</dt><dd>全65室（最大10名/室）和室・和洋室・ツイン</dd>
-          <dt>団体設備</dt><dd>大広間・コンベンションホール・大宴会場／MaxHub完備ミーティングルーム（導入予定）</dd>
+          <dt>団体設備</dt><dd>大広間・コンベンションホール・大宴会場／MaxHub完備ミーティングルーム（導入済み）</dd>
           <dt>標高</dt><dd>約1,400m（信州・白樺湖畔／ビーナスライン起点）</dd>
           <dt>チェックイン</dt><dd>15:00（最終21:00）／ チェックアウト 10:00</dd>
           <dt>駐車場</dt><dd>乗用車100台・<strong style="color:#fff">大型バス20台</strong>（無料）</dd>
@@ -785,6 +801,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
       </div>
     </div>
     <div class="foot-bottom">
+      <a href="privacy.html" style="color:#6b736f">プライバシーポリシー</a>
       <span>© Shirakabako Lakeside Hotel Sankokaku. All Rights Reserved.</span>
       <span>Nagano · Shirakabako · Memories by the Lake</span>
     </div>
@@ -839,5 +856,12 @@ document.querySelectorAll('.stat .num').forEach(el=>{
   ob.observe(el);
 });
 </script>
+
+<!-- モバイル固定CTA -->
+<div class="sticky-cta" aria-label="お問い合わせ">
+  <a class="sc-tel" href="tel:0266-68-2021" data-ev="tel_click">☎ 電話で相談</a>
+  <a class="sc-form" href="contact.html" data-ev="inquiry_cta_click">空室・見積り相談</a>
+</div>
+<script src="assets/site.js"></script>
 </body>
 </html>
