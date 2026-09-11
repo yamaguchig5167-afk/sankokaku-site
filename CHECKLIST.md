@@ -54,7 +54,7 @@
 
 ## 6. 次フェーズの残タスク（今回未実施）
 
-- [ ] **ターゲット別ページ**：sports / music / training / touring / travel-agent（旅行会社向け）
+- [x] **ターゲット別ページ**：sports / music / training / touring / travel-agent（旅行会社向け）＝作成済み・トップに「目的で選ぶ」入口も設置。内容の事実確認（未確認項目は各ページで「要相談」表記）
 - [ ] **画像の最適化**：1MB超のPNG8枚をWebP化＋`srcset`（表示速度・LCP改善）
 - [ ] **モデルスケジュール**（スポーツ/研修/音楽/ツーリング）のタブ表示
 - [ ] Lighthouse実測（Performance / Accessibility / SEO）
