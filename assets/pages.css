@@ -124,3 +124,8 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
   .facts dl{grid-template-columns:1fr}.facts dt{border-bottom:none;padding-bottom:0}
   .foot-top{grid-template-columns:1fr;gap:2rem}.topbar .loc{display:none}
 }
+
+/* 生成画像の図版（利用イメージ・キャプション付き） */
+.figblk{max-width:980px;margin:2.8rem auto 0}
+.figblk picture,.figblk img{display:block;width:100%;height:auto;border-radius:4px}
+.figblk figcaption{font-size:.75rem;color:var(--muted);margin-top:.5rem;text-align:right;letter-spacing:.02em}
