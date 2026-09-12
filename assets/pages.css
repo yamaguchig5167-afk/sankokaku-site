@@ -147,3 +147,19 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 .excard .cta{margin-top:1rem;font-family:var(--label);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);border-top:1px solid #ece5d6;padding-top:.9rem;transition:.3s}
 .excard .cta:hover{color:var(--ember)}
 @media(max-width:900px){.excard-grid{grid-template-columns:1fr}.cat-band{margin-top:2.2rem}}
+
+/* 周辺施設ガイド（一次情報） */
+.spots{padding:1rem 0 4rem}
+.spot-note{max-width:960px;margin:0 auto 2.2rem;font-size:.82rem;color:var(--ink-soft);line-height:1.95;background:#fff;border-left:3px solid var(--gold);padding:1.1rem 1.3rem;border-radius:4px}
+.spot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+.spot{background:#fff;border-radius:6px;padding:1.6rem 1.7rem;box-shadow:0 18px 50px -38px rgba(0,0,0,.25);border:1px solid #eee6d8}
+.spot .spot-cat{font-family:var(--label);font-size:.6rem;letter-spacing:.18em;color:var(--ember);text-transform:uppercase}
+.spot h3{font-family:var(--serif-jp);font-weight:600;font-size:1.15rem;letter-spacing:.04em;color:var(--ink);margin:.3rem 0 .6rem;line-height:1.5}
+.spot>p{font-size:.85rem;color:var(--muted);line-height:1.9;margin-bottom:1rem}
+.spot dl{border-top:1px solid #ece5d6}
+.spot dl>div{display:grid;grid-template-columns:96px 1fr;border-bottom:1px solid #ece5d6}
+.spot dt{padding:.55rem .3rem;font-family:var(--serif-jp);color:var(--teal);font-size:.82rem}
+.spot dd{padding:.55rem .3rem;color:var(--ink-soft);font-size:.82rem;line-height:1.7}
+.spot dd a{color:var(--teal);border-bottom:1px solid var(--gold)}
+.spot .warn{color:var(--ember)}
+@media(max-width:900px){.spot-grid{grid-template-columns:1fr}}
