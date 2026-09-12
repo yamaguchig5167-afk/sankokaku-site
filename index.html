@@ -429,10 +429,10 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
 <section class="stats reveal">
   <div class="wrap">
     <div class="stats-grid">
-      <div class="stat"><div class="num" data-to="45"><span>0</span><span class="u">室</span></div><div class="lbl">全客室数</div></div>
-      <div class="stat"><div class="num" data-to="10"><span>0</span><span class="u">名/室</span></div><div class="lbl">最大収容</div></div>
-      <div class="stat"><div class="num" data-to="5"><span>0</span><span class="u">台</span></div><div class="lbl">大型バス駐車</div></div>
-      <div class="stat"><div class="num" data-to="1400"><span>0</span><span class="u">m</span></div><div class="lbl">標高（白樺湖畔）</div></div>
+      <div class="stat"><div class="num" data-to="45"><span>45</span><span class="u">室</span></div><div class="lbl">全客室数</div></div>
+      <div class="stat"><div class="num" data-to="10"><span>10</span><span class="u">名/室</span></div><div class="lbl">最大収容</div></div>
+      <div class="stat"><div class="num" data-to="5"><span>5</span><span class="u">台</span></div><div class="lbl">大型バス駐車</div></div>
+      <div class="stat"><div class="num" data-to="1400"><span>1,400</span><span class="u">m</span></div><div class="lbl">標高（白樺湖畔）</div></div>
     </div>
   </div>
 </section>
@@ -595,7 +595,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
         <h3>みんなで囲める、大広間</h3>
         <div class="en-sub">Banquet & meeting hall</div>
         <p>大宴会から合宿のミーティング、表彰式まで。大広間とコンベンションホールが、団体の"集まる時間"を支えます。スクリーン・マイク等のご相談も。</p>
-        <a class="link-more" href="#cta">団体利用を相談する</a>
+        <a class="link-more" href="contact.html" data-ev="inquiry_cta_click">団体利用を相談する</a>
       </div>
     </div>
 
@@ -703,7 +703,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
         <div class="body">
           <h3>合宿スタンダード（2食付）</h3>
           <p>しっかり食べて、大広間でミーティング。学校・スポーツ・音楽合宿の定番プラン。</p>
-          <div class="price">1泊2食 <b>¥6,500</b> 〜 / 名（税込・目安）</div>
+          <div class="price">1泊2食 <b>¥8,000</b> 〜 / 名（税込・目安）</div>
         </div>
       </div>
       <div class="plan-card reveal">
@@ -711,7 +711,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
         <div class="body">
           <h3>スノボ・素泊まり団体プラン</h3>
           <p>ゲレンデ・ツーリング中心の旅に。費用を抑えて、夜は仲間との時間をたっぷり。</p>
-          <div class="price">1泊素泊まり <b>¥4,500</b> 〜 / 名（税込・目安）</div>
+          <div class="price">1泊素泊まり <b>¥5,500</b> / 名（税込）</div>
         </div>
       </div>
       <div class="plan-card feat reveal">
@@ -764,7 +764,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
     <h2>あなたの合宿を、<br>一生の思い出に。</h2>
     <div class="btns">
       <a href="tel:0266-68-2021" class="btn-lg primary">電話で相談 0266-68-2021</a>
-      <a href="#info" class="btn-lg ghost">合宿・団体の見積り相談</a>
+      <a href="contact.html" data-ev="inquiry_cta_click" class="btn-lg ghost">合宿・団体の見積り相談</a>
     </div>
   </div>
 </section>
@@ -875,15 +875,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:.2}).observe(sec);
 })();
 
-// 数字カウントアップ
-document.querySelectorAll('.stat .num').forEach(el=>{
-  const to=+el.dataset.to, span=el.querySelector('span');
-  const ob=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){
-    let s=null;(function step(t){if(!s)s=t;const p=Math.min((t-s)/1500,1),k=1-Math.pow(1-p,3);
-      span.textContent=Math.round(to*k).toLocaleString();if(p<1)requestAnimationFrame(step);})(performance.now());
-    o.disconnect();}}),{threshold:.6});
-  ob.observe(el);
-});
+// 数字は確定値をHTMLに直接記載（JS無効・reduced-motionでも0室にならない）。0からのカウント演出は行わない。
 </script>
 
 <!-- モバイル固定CTA -->
