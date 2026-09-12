@@ -129,3 +129,21 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 .figblk{max-width:980px;margin:2.8rem auto 0}
 .figblk picture,.figblk img{display:block;width:100%;height:auto;border-radius:4px}
 .figblk figcaption{font-size:.75rem;color:var(--muted);margin-top:.5rem;text-align:right;letter-spacing:.02em}
+
+/* 体験カード（experiences） */
+.exp-wrap{padding:1rem 0 4rem}
+.cat-band{max-width:1180px;margin:3rem auto 1.3rem;font-family:var(--serif-jp);font-weight:600;font-size:1.15rem;letter-spacing:.1em;color:var(--teal);display:flex;align-items:baseline;gap:.7rem;padding:0 .2rem}
+.cat-band .en{font-family:var(--serif-en);font-style:italic;font-size:.95rem;color:var(--gold)}
+.excard-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.excard{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 18px 50px -38px rgba(0,0,0,.25);display:flex;flex-direction:column;border:1px solid #eee6d8}
+.excard figure{margin:0}
+.excard .ph img{display:block;width:100%;height:auto}
+.excard figcaption{font-size:.7rem;color:var(--muted);padding:.3rem .9rem 0;text-align:right}
+.excard .bd{padding:1.2rem 1.4rem 1.5rem;display:flex;flex-direction:column;flex:1}
+.excard .cat{font-family:var(--label);font-size:.6rem;letter-spacing:.18em;color:var(--ember);text-transform:uppercase}
+.excard h3{font-family:var(--serif-jp);font-weight:600;font-size:1.1rem;letter-spacing:.04em;color:var(--ink);margin:.35rem 0 .55rem;line-height:1.5}
+.excard p{font-size:.85rem;color:var(--muted);line-height:1.95}
+.excard .note{font-size:.76rem;color:var(--ember);margin-top:.8rem;line-height:1.7;flex:1}
+.excard .cta{margin-top:1rem;font-family:var(--label);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);border-top:1px solid #ece5d6;padding-top:.9rem;transition:.3s}
+.excard .cta:hover{color:var(--ember)}
+@media(max-width:900px){.excard-grid{grid-template-columns:1fr}.cat-band{margin-top:2.2rem}}
