@@ -241,6 +241,15 @@ footer .fl a:hover{color:var(--gold)}
   // ★送信先エンドポイント：外部フォームサービス(Formspree等)やGASのURLを後からここに設定する。
   //   空のあいだは「準備中」として電話へご案内し、偽の送信成功は表示しない。
   var ENDPOINT = ""; // 例: "https://formspree.io/f/xxxxxx"
+  // 体験ページからの遷移：?experience=<id>（許可リスト検証・PIIは扱わない）で希望項目を初期選択
+  var EXP={canoe:"湖上アクティビティ",hiking:"高原散策",ecology:"湖の環境観察",birch:"白樺林の自然観察",stargazing:"星空観察",bbq:"団体BBQ"};
+  try{
+    var pe=new URLSearchParams(location.search).get("experience");
+    if(pe && Object.prototype.hasOwnProperty.call(EXP,pe)){
+      var cb=form.querySelector('input[name="requests"][value="'+EXP[pe]+'"]');
+      if(cb) cb.checked=true;
+    }
+  }catch(e){}
 
   // フォーム利用開始の計測（最初のフォーカス時に1回）
   var started=false;
