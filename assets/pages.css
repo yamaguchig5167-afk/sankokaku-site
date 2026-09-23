@@ -256,10 +256,10 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 .hero-credit{position:absolute;right:1.2rem;bottom:.8rem;z-index:3;margin:0;font-size:.68rem;color:rgba(255,255,255,.75);letter-spacing:.02em;text-align:right;max-width:80%}
 .hero-credit a{color:inherit;border-bottom:1px solid rgba(255,255,255,.45)}
 /* 資料ダウンロード */
-.dlgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;max-width:1100px;margin:0 auto}
+.dlgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;max-width:1100px;margin:0 auto}
 .dlc{display:block;background:#fff;border:1px solid #eee6d8;border-radius:6px;padding:.8rem;transition:border-color .3s,transform .3s}
 .dlc:hover{border-color:var(--gold);transform:translateY(-3px)}
 .dlc img{width:100%;height:auto;border-radius:3px;box-shadow:0 6px 18px -10px rgba(0,0,0,.35)}
 .dlc b{display:block;font-family:var(--serif-jp);font-weight:600;font-size:.86rem;color:var(--ink);margin-top:.7rem;line-height:1.5}
 .dlc span{font-size:.7rem;color:var(--teal)}
-@media(max-width:900px){.dlgrid{grid-template-columns:repeat(3,1fr)}}@media(max-width:560px){.dlgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.dlgrid{grid-template-columns:repeat(3,1fr)}}@media(max-width:560px){.dlgrid{grid-template-columns:1fr 1fr}}@media(max-width:1100px) and (min-width:901px){.dlgrid{grid-template-columns:repeat(3,1fr)}}

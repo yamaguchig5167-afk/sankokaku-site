@@ -1,10 +1,9 @@
-# 白樺湖レイクサイドホテル山幸閣 サイト
-# 現在はドラフト（サンプルの声・目安料金・イメージ画像を含む）のため、検索エンジンのインデックスを抑止しています。
-# ★本番公開（実データ差し替え後）に切り替える手順：
-#   下の「Disallow: /」の行を「Allow: /」に変更してください。
-#   併せて privacy.html の <meta name="robots" content="noindex"> は残したままで構いません（ポリシー頁は非索引で問題なし）。
+# 白樺湖レイクサイドホテル山幸閣 サイト（2026-09-23 検索エンジンへの公開に切替）
+# 注意：GitHub Pages のプロジェクトサイトでは、検索エンジンが読む robots.txt はドメイン直下
+# （https://yamaguchig5167-afk.github.io/robots.txt）のみです。このファイルは独自ドメイン移行後に有効になります。
+# サイトマップは Google Search Console から送信してください。
 
 User-agent: *
-Disallow: /
+Allow: /
 
 Sitemap: https://yamaguchig5167-afk.github.io/sankokaku-site/sitemap.xml
