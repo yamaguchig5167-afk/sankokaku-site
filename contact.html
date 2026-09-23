@@ -241,7 +241,8 @@ footer .fl a:hover{color:var(--gold)}
   var submitBtn=form.querySelector('.submit');
   // ★送信先エンドポイント：外部フォームサービス(Formspree等)やGASのURLを後からここに設定する。
   //   空のあいだは「準備中」として電話へご案内し、偽の送信成功は表示しない。
-  var ENDPOINT = ""; // 例: "https://formspree.io/f/xxxxxx"
+  var ENDPOINT = ""; // Google Apps Script のウェブアプリURL（https://script.google.com/macros/s/…/exec）を設定する
+  var LOADED_AT = Date.now();
   // 体験ページからの遷移：?experience=<id>（許可リスト検証・PIIは扱わない）で希望項目を初期選択
   var EXP={canoe:"湖上アクティビティ",hiking:"高原散策",ecology:"湖の環境観察",birch:"白樺林の自然観察",stargazing:"星空観察",bbq:"団体BBQ"};
   try{
@@ -289,11 +290,14 @@ footer .fl a:hover{color:var(--gold)}
     }
     // 送信先が設定されている場合のみ送信
     submitBtn.disabled=true; submitBtn.textContent='送信中…';
-    var data=new FormData(form);
-    fetch(ENDPOINT,{method:'POST',body:data,headers:{'Accept':'application/json'}})
-      .then(function(r){
-        if(r.ok){ status.className='status info show'; status.innerHTML='送信しました。担当者より確認後にご連絡いたします。ありがとうございました。'; form.reset(); }
-        else{ throw new Error('bad'); }
+    // Google Apps Script で受け取れるよう、URLエンコード形式で送る（複数選択も保持される）
+    var data=new URLSearchParams(new FormData(form));
+    data.append('_elapsed',String(Date.now()-LOADED_AT));
+    fetch(ENDPOINT,{method:'POST',body:data})
+      .then(function(r){ if(!r.ok) throw new Error('http'); return r.json(); })
+      .then(function(res){
+        if(res && res.ok){ status.className='status info show'; status.innerHTML='送信しました。担当者より確認後にご連絡いたします。ありがとうございました。'; form.reset(); window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'inquiry_form_sent'}); }
+        else{ throw new Error('ng'); }
       })
       .catch(function(){ status.className='status error show'; status.innerHTML='送信に失敗しました。お手数ですが、お電話（<a href="tel:0266-68-2021">0266-68-2021</a>）にてご相談ください。'; })
       .finally(function(){ submitBtn.disabled=false; submitBtn.textContent='この内容で相談する'; });
