@@ -15,10 +15,10 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "name": "白樺湖レイクサイドホテル山幸閣", "url": "https://yamaguchig5167-afk.github.io/sankokaku-site/", "telephone": "+81-266-68-2021", "faxNumber": "+81-266-68-2092", "image": "https://yamaguchig5167-afk.github.io/sankokaku-site/assets/PhotoGallery-10.webp", "address": {"@type": "PostalAddress", "postalCode": "391-0301", "addressRegion": "長野県", "addressLocality": "茅野市", "streetAddress": "北山3418-32", "addressCountry": "JP"}, "checkinTime": "15:00", "checkoutTime": "10:00", "numberOfRooms": 45}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="assets/site.css">
 <style>
-:root{--ink:#1b2826;--ink-soft:#33433f;--paper:#f6f3ec;--paper-2:#efe9dd;--teal:#2f5d57;--teal-light:#4f827a;--gold:#b29a63;--ember:#d8743f;--text:#2b2a26;--muted:#6f6b62;--serif-en:'Cormorant Garamond',serif;--serif-jp:'Shippori Mincho',serif;--sans-jp:'Noto Sans JP',sans-serif;--label:'Jost',sans-serif}
+:root{--ink:#1b2826;--ink-soft:#33433f;--paper:#f6f3ec;--paper-2:#efe9dd;--teal:#2f5d57;--teal-light:#4f827a;--gold:#b29a63;--ember:#ad5424;--text:#2b2a26;--muted:#5f5b53;--serif-en:'Cormorant Garamond',serif;--serif-jp:'Shippori Mincho',serif;--sans-jp:'Noto Sans JP',sans-serif;--label:'Jost',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
 body{font-family:var(--sans-jp);color:var(--text);background:var(--paper);line-height:1.9;font-weight:300;letter-spacing:.04em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
@@ -95,11 +95,11 @@ header.scrolled .btn-reserve:hover{background:var(--ember);border-color:var(--em
 .dine h2{font-family:var(--serif-jp);font-weight:500;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:.1em;line-height:1.8}
 .dine p{max-width:600px;margin:1.6rem auto 0;color:rgba(255,255,255,.8);font-size:.92rem;line-height:2.3}
 .menu{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2.2rem}
-.menu span{border:1px solid rgba(216,116,63,.55);color:#f3e6da;font-family:var(--serif-jp);font-size:.9rem;padding:.6rem 1.3rem;border-radius:40px}
+.menu span{border:1px solid rgba(173,84,36,.55);color:#f3e6da;font-family:var(--serif-jp);font-size:.9rem;padding:.6rem 1.3rem;border-radius:40px}
 .dine .note{margin-top:1.8rem;font-size:.78rem;color:rgba(255,255,255,.55)}
 /* CTA */
 .cta{padding:6rem 0;text-align:center;position:relative;overflow:hidden;color:#fff}
-.cta .bg{position:absolute;inset:0;background:url('assets/PhotoGallery-4.webp') center/cover no-repeat}
+.cta .bg{position:absolute;inset:0;background:url('assets/PhotoGallery-4-960.webp') center/cover no-repeat}
 .cta::after{content:"";position:absolute;inset:0;background:rgba(16,26,24,.7)}
 .cta .in{position:relative;z-index:2}
 .cta h2{font-family:var(--serif-jp);font-weight:500;font-size:clamp(1.5rem,3.2vw,2.2rem);letter-spacing:.1em;line-height:1.8;margin-bottom:1.8rem}
@@ -112,9 +112,9 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 .foot-brand .jp{font-family:var(--serif-jp);font-size:1.25rem;color:#fff;letter-spacing:.12em;font-weight:600}
 .foot-brand .en{font-family:var(--label);font-size:.6rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-top:.6rem;display:block}
 .foot-brand address{font-style:normal;margin-top:1.4rem;line-height:2;color:#9ba39f}
-.foot-col h5{font-family:var(--serif-jp);color:#fff;font-size:.88rem;letter-spacing:.14em;margin-bottom:1.1rem;font-weight:500}
+.foot-col h5,.foot-col .fh{font-family:var(--serif-jp);color:#fff;font-size:.88rem;letter-spacing:.14em;margin-bottom:1.1rem;font-weight:500}
 .foot-col a{display:block;padding:.38rem 0;color:#9ba39f;transition:color .3s}.foot-col a:hover{color:var(--gold)}
-.foot-bottom{display:flex;justify-content:space-between;padding-top:1.8rem;font-family:var(--label);font-size:.64rem;letter-spacing:.18em;color:#6b736f;flex-wrap:wrap;gap:1rem}
+.foot-bottom{display:flex;justify-content:space-between;padding-top:1.8rem;font-family:var(--label);font-size:.64rem;letter-spacing:.18em;color:#9ba39f;flex-wrap:wrap;gap:1rem}
 .reveal{opacity:0;transform:translateY(38px);transition:opacity 1s,transform 1s}.reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.hero .bg{animation:none;transform:none}.reveal{opacity:1!important;transform:none!important}}
 @media(max-width:900px){
@@ -127,6 +127,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
   .foot-top{grid-template-columns:1fr;gap:2rem}.topbar .loc{display:none}
 }
 </style>
+<link rel="preload" as="image" href="assets/TOP_facility-960.webp" media="(max-width:760px)" fetchpriority="high" class="hero-preload"><link rel="preload" as="image" href="assets/TOP_facility.webp" media="(min-width:761px)" fetchpriority="high"><style>@media(max-width:760px){.hero .bg{background-image:url('assets/TOP_facility-960.webp')!important}}</style>
 </head>
 <body>
 <div class="topbar">
@@ -185,19 +186,19 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
     </div>
     <div class="fac-grid">
       <div class="fac">
-        <div class="ph"><img src="assets/PhotoGallery-3.webp" alt="コンベンションホール エトワール"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/PhotoGallery-3.webp" srcset="assets/PhotoGallery-3-800.webp 800w, assets/PhotoGallery-3.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="コンベンションホール エトワール"></div>
         <div class="bd"><span class="en">Convention Hall</span><h3>コンベンションホール「エトワール」</h3><p>研修や講演など、用途に合わせてご活用いただけます。</p><div class="loc">本館1階</div></div>
       </div>
       <div class="fac">
-        <div class="ph"><img src="assets/PhotoGallery-5.webp" alt="大広間"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/PhotoGallery-5.webp" srcset="assets/PhotoGallery-5-800.webp 800w, assets/PhotoGallery-5.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="大広間"></div>
         <div class="bd"><span class="en">Banquet Hall</span><h3>大広間</h3><p>団体・20名様以上のグループでご利用の方は、大広間にてお食事をご用意します。</p><div class="loc">本館3階</div></div>
       </div>
       <div class="fac">
-        <div class="ph"><img src="assets/PhotoGallery-7.webp" alt="ロビー・フロント"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/PhotoGallery-7.webp" srcset="assets/PhotoGallery-7-800.webp 800w, assets/PhotoGallery-7.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="ロビー・フロント"></div>
         <div class="bd"><span class="en">Lobby &amp; Front</span><h3>フロント・ロビー</h3><p>チェックイン・ご相談はこちらで。集合やオリエンテーションにも。</p><div class="loc">本館1階</div></div>
       </div>
       <div class="fac">
-        <div class="ph"><img src="assets/PhotoGallery-2.webp" alt="大浴場"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/PhotoGallery-2.webp" srcset="assets/PhotoGallery-2-800.webp 800w, assets/PhotoGallery-2.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="大浴場"></div>
         <div class="bd"><span class="en">Public Bath</span><h3>大浴場</h3><p>期間限定の営業です（温泉ではございません）。団体でのご利用はご相談ください。</p><div class="loc">本館2階</div></div>
       </div>
       <div class="fac">
@@ -285,14 +286,14 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
         <address>〒391-0301 長野県茅野市北山3418-32<br>TEL 0266-68-2021　FAX 0266-68-2092</address>
       </div>
       <div class="foot-col">
-        <h5>ご案内</h5>
+        <p class="fh">ご案内</p>
         <a href="rooms.html">客室</a>
         <a href="facilities.html">館内施設</a>
         <a href="education.html">教育旅行・合宿</a>
         <a href="maxhub.html">ミーティングルーム</a>
       </div>
       <div class="foot-col">
-        <h5>ご予約</h5>
+        <p class="fh">ご予約</p>
         <a href="ski.html">スキー・スノーボード団体</a><a href="guide.html">幹事・引率者ガイド</a><a href="faq.html">よくあるご質問</a>
         <a href="access.html">アクセス</a>
         <a href="#cta">お問い合わせ</a>
@@ -300,7 +301,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
       </div>
     </div>
     <div class="foot-bottom">
-      <a href="privacy.html" style="color:#6b736f">プライバシーポリシー</a>
+      <a href="privacy.html" style="color:#9ba39f">プライバシーポリシー</a>
       <span>© Shirakabako Lakeside Hotel Sankokaku.</span>
       <span>Nagano · Shirakabako · Facilities</span>
     </div>
@@ -322,6 +323,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   <a class="sc-tel" href="tel:0266-68-2021" data-ev="tel_click">☎ 電話で相談</a>
   <a class="sc-form" href="contact.html" data-ev="inquiry_cta_click">空室・見積り相談</a>
 </div>
-<script src="assets/site.js"></script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

@@ -15,13 +15,13 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "name": "白樺湖レイクサイドホテル山幸閣", "url": "https://yamaguchig5167-afk.github.io/sankokaku-site/", "telephone": "+81-266-68-2021", "faxNumber": "+81-266-68-2092", "image": "https://yamaguchig5167-afk.github.io/sankokaku-site/assets/PhotoGallery-10.webp", "address": {"@type": "PostalAddress", "postalCode": "391-0301", "addressRegion": "長野県", "addressLocality": "茅野市", "streetAddress": "北山3418-32", "addressCountry": "JP"}, "checkinTime": "15:00", "checkoutTime": "10:00", "numberOfRooms": 45}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="assets/site.css">
 <style>
 :root{
   --ink:#1b2826;--ink-soft:#33433f;--paper:#f6f3ec;--paper-2:#efe9dd;
-  --teal:#2f5d57;--teal-light:#4f827a;--gold:#b29a63;--ember:#d8743f;
-  --text:#2b2a26;--muted:#6f6b62;--white:#fff;
+  --teal:#2f5d57;--teal-light:#4f827a;--gold:#b29a63;--ember:#ad5424;
+  --text:#2b2a26;--muted:#5f5b53;--white:#fff;
   --serif-en:'Cormorant Garamond',serif;--serif-jp:'Shippori Mincho',serif;
   --sans-jp:'Noto Sans JP',sans-serif;--label:'Jost',sans-serif;
 }
@@ -141,7 +141,7 @@ header.scrolled .hamburger span{background:var(--ink)}
 
 /* CTA */
 .cta{padding:6.5rem 0;text-align:center;position:relative;overflow:hidden;color:#fff}
-.cta .bg{position:absolute;inset:0;background:url('assets/PhotoGallery-10.webp') center/cover no-repeat}
+.cta .bg{position:absolute;inset:0;background:url('assets/PhotoGallery-10-960.webp') center/cover no-repeat}
 .cta::after{content:"";position:absolute;inset:0;background:rgba(16,26,24,.72)}
 .cta .in{position:relative;z-index:2}
 .cta .label{color:var(--ember);display:block;margin-bottom:1.3rem}
@@ -161,10 +161,10 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 .foot-brand .jp{font-family:var(--serif-jp);font-size:1.25rem;color:#fff;letter-spacing:.12em;font-weight:500}
 .foot-brand .en{font-family:var(--label);font-size:.6rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-top:.6rem;display:block}
 .foot-brand address{font-style:normal;margin-top:1.4rem;line-height:2;color:#9ba39f}
-.foot-col h5{font-family:var(--serif-jp);color:#fff;font-size:.88rem;letter-spacing:.14em;margin-bottom:1.1rem;font-weight:400}
+.foot-col h5,.foot-col .fh{font-family:var(--serif-jp);color:#fff;font-size:.88rem;letter-spacing:.14em;margin-bottom:1.1rem;font-weight:400}
 .foot-col a{display:block;padding:.38rem 0;color:#9ba39f;transition:color .3s}
 .foot-col a:hover{color:var(--gold)}
-.foot-bottom{display:flex;justify-content:space-between;padding-top:1.8rem;font-family:var(--label);font-size:.64rem;letter-spacing:.18em;color:#6b736f;flex-wrap:wrap;gap:1rem}
+.foot-bottom{display:flex;justify-content:space-between;padding-top:1.8rem;font-family:var(--label);font-size:.64rem;letter-spacing:.18em;color:#9ba39f;flex-wrap:wrap;gap:1rem}
 
 .reveal{opacity:0;transform:translateY(38px);transition:opacity 1s,transform 1s}
 .reveal.in{opacity:1;transform:none}
@@ -193,6 +193,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 }
 @media(max-width:520px){.feat-grid{grid-template-columns:1fr}}
 </style>
+<link rel="preload" as="image" href="assets/PhotoGallery-7-960.webp" media="(max-width:760px)" fetchpriority="high" class="hero-preload"><link rel="preload" as="image" href="assets/PhotoGallery-7.webp" media="(min-width:761px)" fetchpriority="high"><style>@media(max-width:760px){.hero .bg{background-image:url('assets/PhotoGallery-7-960.webp')!important}}</style>
 </head>
 <body>
 
@@ -302,7 +303,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
     </div>
 
     <div class="row">
-      <div class="im" style="position:relative"><img src="assets/maxhub-sports.png" alt="練習映像を大画面で振り返るチーム（イメージ）"><span style="position:absolute;right:.6rem;bottom:.6rem;z-index:3;background:rgba(0,0,0,.55);color:#fff;font-size:.66rem;padding:.15rem .5rem;border-radius:2px;letter-spacing:.05em">イメージ</span></div>
+      <div class="im" style="position:relative"><img loading="lazy" decoding="async" src="assets/maxhub-sports-960.webp" alt="練習映像を大画面で振り返るチーム（イメージ）"><span style="position:absolute;right:.6rem;bottom:.6rem;z-index:3;background:rgba(0,0,0,.55);color:#fff;font-size:.66rem;padding:.15rem .5rem;border-radius:2px;letter-spacing:.05em">イメージ</span></div>
       <div class="tx">
         <span class="tag">Sports Camp</span>
         <h3>スポーツ合宿の<br>映像分析</h3>
@@ -312,7 +313,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
     </div>
 
     <div class="row rev">
-      <div class="im" style="position:relative"><img src="assets/maxhub-webconf.png" alt="大画面で資料を共有する研修（イメージ）"><span style="position:absolute;right:.6rem;bottom:.6rem;z-index:3;background:rgba(0,0,0,.55);color:#fff;font-size:.66rem;padding:.15rem .5rem;border-radius:2px;letter-spacing:.05em">イメージ</span></div>
+      <div class="im" style="position:relative"><img loading="lazy" decoding="async" src="assets/maxhub-webconf-960.webp" alt="大画面で資料を共有する研修（イメージ）"><span style="position:absolute;right:.6rem;bottom:.6rem;z-index:3;background:rgba(0,0,0,.55);color:#fff;font-size:.66rem;padding:.15rem .5rem;border-radius:2px;letter-spacing:.05em">イメージ</span></div>
       <div class="tx">
         <span class="tag">Corporate · Workation</span>
         <h3>企業研修・<br>ワーケーション</h3>
@@ -322,7 +323,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
     </div>
 
     <div class="row">
-      <div class="im"><img src="assets/PhotoGallery-5.webp" alt="合奏・発表会に使える大広間（本館3階）" loading="lazy"></div>
+      <div class="im"><img src="assets/PhotoGallery-5.webp" srcset="assets/PhotoGallery-5-800.webp 800w, assets/PhotoGallery-5.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="合奏・発表会に使える大広間（本館3階）" loading="lazy"></div>
       <div class="tx">
         <span class="tag">Music · Band Camp</span>
         <h3>吹奏楽・<br>音楽合宿</h3>
@@ -347,7 +348,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
         <div class="bd"><h3>ミーティングルーム</h3><p style="font-size:.72rem;color:#8a857b;margin-bottom:.4rem">写真はMAXHUBの設置例です（画像提供：ナイスモバイル株式会社）。</p><p>合宿のミーティング・研修・発表会の中心に。大広間・コンベンションホールと合わせ、大人数の団体にも対応します。</p></div>
       </div>
       <div class="pcard">
-        <div class="ph"><img src="assets/PhotoGallery-7.webp" alt="ロビー"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/PhotoGallery-7.webp" srcset="assets/PhotoGallery-7-800.webp 800w, assets/PhotoGallery-7.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="ロビー"></div>
         <div class="bd"><h3>ロビー</h3><p>集合・オリエンテーション・スケジュール共有に。到着してすぐ、チーム全員へ情報をスムーズに伝えられます。</p></div>
       </div>
     </div>
@@ -379,14 +380,14 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
         <address>〒391-0301 長野県茅野市北山3418-32<br>TEL 0266-68-2021　FAX 0266-68-2092</address>
       </div>
       <div class="foot-col">
-        <h5>合宿・団体の皆様へ</h5>
+        <p class="fh">合宿・団体の皆様へ</p>
         <a href="maxhub.html">MAXHUB完備ミーティングルーム</a>
         <a href="index.html#surprise">サプライズ演出</a>
         <a href="index.html#camp">合宿・団体プラン</a>
         <a href="index.html#rooms">客室</a>
       </div>
       <div class="foot-col">
-        <h5>ご案内</h5>
+        <p class="fh">ご案内</p>
         <a href="index.html#gallery">ギャラリー</a>
         <a href="access.html">アクセス</a>
         <a href="#cta">お見積り・ご相談</a>
@@ -394,7 +395,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
       </div>
     </div>
     <div class="foot-bottom">
-      <a href="privacy.html" style="color:#6b736f">プライバシーポリシー</a>
+      <a href="privacy.html" style="color:#9ba39f">プライバシーポリシー</a>
       <span>© Shirakabako Lakeside Hotel Sankokaku.</span>
       <span>Nagano · Shirakabako · Smart Meeting</span>
     </div>
@@ -416,6 +417,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   <a class="sc-tel" href="tel:0266-68-2021" data-ev="tel_click">☎ 電話で相談</a>
   <a class="sc-form" href="contact.html" data-ev="inquiry_cta_click">空室・見積り相談</a>
 </div>
-<script src="assets/site.js"></script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

@@ -14,7 +14,7 @@
     font-size:.92rem;letter-spacing:.02em;text-decoration:none;min-height:56px;
   }
   .sticky-cta .sc-tel{background:#2f5d57;color:#fff}
-  .sticky-cta .sc-form{background:#d8743f;color:#fff}
+  .sticky-cta .sc-form{background:#ad5424;color:#fff}
   /* 固定CTAが本文・フッターを隠さないための余白 */
   body{padding-bottom:56px}
 }
@@ -22,7 +22,7 @@
 /* フォーカス可視化（アクセシビリティ・既存を消さず補強） */
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
 textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
-  outline:2px solid #d8743f;outline-offset:2px;border-radius:2px;
+  outline:2px solid #ad5424;outline-offset:2px;border-radius:2px;
 }
 
 /* prefers-reduced-motion 共通 */
@@ -32,3 +32,6 @@ textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
 
 /* スマホでは上部の電話帯を隠す（固定ヘッダーと重なるため。電話は下部の固定CTAから） */
 @media(max-width:768px){.topbar{display:none}}
+
+/* フッターの小見出し（見出し要素にしない） */
+.foot-col .fh{font-family:'Shippori Mincho',serif;color:#fff;font-size:.88rem;letter-spacing:.14em;margin-bottom:1.1rem;font-weight:500}

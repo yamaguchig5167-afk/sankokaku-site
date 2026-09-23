@@ -15,7 +15,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "name": "白樺湖レイクサイドホテル山幸閣", "url": "https://yamaguchig5167-afk.github.io/sankokaku-site/", "telephone": "+81-266-68-2021", "faxNumber": "+81-266-68-2092", "image": "https://yamaguchig5167-afk.github.io/sankokaku-site/assets/PhotoGallery-10.webp", "address": {"@type": "PostalAddress", "postalCode": "391-0301", "addressRegion": "長野県", "addressLocality": "茅野市", "streetAddress": "北山3418-32", "addressCountry": "JP"}, "checkinTime": "15:00", "checkoutTime": "10:00", "numberOfRooms": 45}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="assets/site.css">
 <style>
 :root{
@@ -26,9 +26,9 @@
   --teal:#2f5d57;
   --teal-light:#4f827a;
   --gold:#b29a63;
-  --ember:#d8743f;   /* 花火・サプライズの温度 */
+  --ember:#ad5424;   /* 花火・サプライズの温度 */
   --text:#2b2a26;
-  --muted:#6f6b62;
+  --muted:#5f5b53;
   --white:#ffffff;
   --serif-en:'Cormorant Garamond',serif;
   --serif-jp:'Shippori Mincho',serif;
@@ -87,7 +87,7 @@ header.scrolled .hamburger span{background:var(--ink)}
 .hero-en{font-family:var(--serif-en);font-style:italic;font-size:clamp(1rem,2vw,1.5rem);letter-spacing:.1em;color:#e7dfc8;margin-top:1.2rem;opacity:0;animation:fadeUp 1.4s 1s forwards}
 .hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.2rem;opacity:0;animation:fadeUp 1.4s 1.2s forwards}
 .hero-cta .hcta{font-family:var(--sans-jp);font-weight:500;font-size:.95rem;letter-spacing:.06em;padding:1rem 2rem;border-radius:3px;transition:.35s;white-space:nowrap}
-.hero-cta .primary{background:var(--ember);color:#fff;box-shadow:0 10px 30px -10px rgba(216,116,63,.6)}
+.hero-cta .primary{background:var(--ember);color:#fff;box-shadow:0 10px 30px -10px rgba(173,84,36,.6)}
 .hero-cta .primary:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
 .hero-cta .ghost{border:1px solid rgba(255,255,255,.75);color:#fff}
 .hero-cta .ghost:hover{background:#fff;color:var(--ink)}
@@ -113,16 +113,16 @@ header.scrolled .hamburger span{background:var(--ink)}
 
 /* サプライズ演出（だいご味・ダーク） */
 .surprise{padding:9rem 0;position:relative;overflow:hidden;text-align:center;color:#fff}
-.surprise .bg{position:absolute;inset:0;background:url('assets/fireworks.png') center/cover no-repeat;z-index:0}
+.surprise .bg{position:absolute;inset:0;background:url('assets/fireworks-1600.webp') center/cover no-repeat;z-index:0}
 .surprise::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,22,.55),rgba(10,14,26,.7));z-index:1}
 .fw-canvas{position:absolute;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen}
 .surprise .inner{position:relative;z-index:3}
 .surprise .label{color:var(--ember);margin-bottom:1.6rem;display:block}
 .surprise h2{font-family:var(--serif-jp);font-weight:500;font-size:clamp(1.7rem,4vw,2.7rem);line-height:1.9;letter-spacing:.14em}
-.surprise h2 em{font-style:normal;color:var(--ember);text-shadow:0 0 28px rgba(216,116,63,.6)}
+.surprise h2 em{font-style:normal;color:var(--ember);text-shadow:0 0 28px rgba(173,84,36,.6)}
 .surprise p{max-width:620px;margin:2.2rem auto 0;font-size:.95rem;line-height:2.5;color:rgba(255,255,255,.85);font-weight:300}
 .surprise-menu{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:3rem}
-.surprise-menu span{border:1px solid rgba(216,116,63,.55);color:#f3e6da;font-family:var(--serif-jp);font-size:.86rem;letter-spacing:.08em;padding:.7rem 1.4rem;border-radius:40px;transition:.4s;backdrop-filter:blur(2px)}
+.surprise-menu span{border:1px solid rgba(173,84,36,.55);color:#f3e6da;font-family:var(--serif-jp);font-size:.86rem;letter-spacing:.08em;padding:.7rem 1.4rem;border-radius:40px;transition:.4s;backdrop-filter:blur(2px)}
 .surprise-menu span:hover{background:var(--ember);border-color:var(--ember);color:#fff}
 .surprise .note{margin-top:2.6rem;font-size:.8rem;color:rgba(255,255,255,.6);letter-spacing:.06em}
 
@@ -199,7 +199,7 @@ header.scrolled .hamburger span{background:var(--ink)}
 .info dt{font-family:var(--serif-jp);color:var(--gold);letter-spacing:.12em;font-weight:400}
 .info dd{color:rgba(255,255,255,.82);line-height:1.9}
 .info .accent-box{background:#22312e;padding:2.4rem;border-left:2px solid var(--ember)}
-.info .accent-box h4{font-family:var(--serif-jp);font-weight:500;font-size:1.1rem;letter-spacing:.1em;margin-bottom:1.2rem;color:#fff}
+.info .accent-box h3{font-family:var(--serif-jp);font-weight:500;font-size:1.1rem;letter-spacing:.1em;margin-bottom:1.2rem;color:#fff}
 .info .accent-box .big-tel{font-family:var(--serif-en);font-size:2.2rem;color:#fff;letter-spacing:.04em;margin:.4rem 0}
 .info .accent-box .hours{font-size:.82rem;color:rgba(255,255,255,.7);line-height:2}
 .info .map-btn{display:inline-block;margin-top:1.6rem;font-family:var(--label);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:.8rem 1.6rem;transition:.4s}
@@ -207,7 +207,7 @@ header.scrolled .hamburger span{background:var(--ink)}
 
 /* CTA */
 .cta{padding:6.5rem 0;text-align:center;position:relative;overflow:hidden;color:#fff}
-.cta .bg{position:absolute;inset:0;background:url('assets/PhotoGallery-4.webp') center/cover no-repeat}
+.cta .bg{position:absolute;inset:0;background:url('assets/PhotoGallery-4-960.webp') center/cover no-repeat}
 .cta::after{content:"";position:absolute;inset:0;background:rgba(16,26,24,.66)}
 .cta .inner{position:relative;z-index:2}
 .cta .label{color:var(--ember);display:block;margin-bottom:1.4rem}
@@ -225,16 +225,16 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
 .foot-brand .jp{font-family:var(--serif-jp);font-size:1.3rem;color:#fff;letter-spacing:.12em;font-weight:500}
 .foot-brand .en{font-family:var(--label);font-size:.62rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-top:.6rem;display:block}
 .foot-brand address{font-style:normal;margin-top:1.6rem;line-height:2.1;color:#9ba39f}
-.foot-col h5{font-family:var(--serif-jp);color:#fff;font-size:.9rem;letter-spacing:.14em;margin-bottom:1.2rem;font-weight:400}
+.foot-col h5,.foot-col .fh{font-family:var(--serif-jp);color:#fff;font-size:.9rem;letter-spacing:.14em;margin-bottom:1.2rem;font-weight:400}
 .foot-col a{display:block;padding:.4rem 0;color:#9ba39f;transition:color .3s}
 .foot-col a:hover{color:var(--gold)}
-.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;font-family:var(--label);font-size:.66rem;letter-spacing:.18em;color:#6b736f;flex-wrap:wrap;gap:1rem}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;font-family:var(--label);font-size:.66rem;letter-spacing:.18em;color:#9ba39f;flex-wrap:wrap;gap:1rem}
 
 /* 演出の流れ ステップ */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;max-width:900px;margin:3.4rem auto 0}
 .step{border:1px solid rgba(255,255,255,.16);border-radius:3px;padding:1.8rem 1.4rem;background:rgba(255,255,255,.04);backdrop-filter:blur(3px);text-align:left}
 .step .sn{font-family:var(--label);font-size:.62rem;letter-spacing:.25em;color:var(--ember)}
-.step h4{font-family:var(--serif-jp);font-weight:500;font-size:1.15rem;letter-spacing:.08em;margin:.5rem 0 .6rem;color:#fff}
+.step h3{font-family:var(--serif-jp);font-weight:500;font-size:1.15rem;letter-spacing:.08em;margin:.5rem 0 .6rem;color:#fff}
 .step p{font-size:.8rem;color:rgba(255,255,255,.74);line-height:1.95}
 
 /* 数字で見る */
@@ -255,7 +255,8 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
 .location .lt .pins{display:flex;flex-wrap:wrap;gap:.6rem}
 .location .lt .pins span{border:1px solid rgba(255,255,255,.25);border-radius:30px;padding:.5rem 1rem;font-size:.78rem;letter-spacing:.06em;color:rgba(255,255,255,.85)}
 .location .lm{position:relative}
-.location .lm iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(1.05) contrast(1.02)}
+.location .lm .map-facade{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;cursor:pointer;background:#1b2826;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;color:#fff;font-family:inherit}.lm .map-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;transition:opacity .3s}.lm .map-facade:hover img{opacity:.7}.lm .mf-btn{position:relative;background:#ad5424;color:#fff;padding:.8rem 1.4rem;border-radius:3px;font-size:.95rem;font-weight:500}.lm .mf-note{position:relative;font-size:.75rem;color:rgba(255,255,255,.85)}
+.lm iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(1.05) contrast(1.02)}
 
 /* MAXHUB スマートミーティング */
 .maxhub{padding:7rem 0;background:var(--paper)}
@@ -340,6 +341,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
   .masonry{columns:1}
 }
 </style>
+<link rel="preload" as="image" href="assets/PhotoGallery-10-960.webp" media="(max-width:760px)" fetchpriority="high" class="hero-preload"><link rel="preload" as="image" href="assets/PhotoGallery-10.webp" media="(min-width:761px)" fetchpriority="high"><style>@media(max-width:760px){.hero .bg{background-image:url('assets/PhotoGallery-10-960.webp')!important}}</style>
 </head>
 <body>
 
@@ -416,11 +418,11 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
     <div class="sec-head"><div class="en-title">Choose Your Camp</div><div class="jp-title">目 的 で 選 ぶ</div><div class="divider"></div></div>
     <div class="tg">
       <a href="education.html"><img src="assets/lake-boats.webp" alt="学校・教育旅行（白樺湖畔）" loading="lazy"><div class="c"><h3>学校・教育旅行</h3><span>体験学習・合宿の拠点に →</span></div></a>
-      <a href="sports.html"><img src="assets/TOP_sights.webp" alt="スポーツ合宿（白樺湖畔）" loading="lazy"><div class="c"><h3>スポーツ合宿</h3><span>映像の振り返り・O2 DOCTOR →</span></div></a>
-      <a href="music.html"><img src="assets/PhotoGallery-5.webp" alt="音楽・文化系合宿（大広間）" loading="lazy"><div class="c"><h3>音楽・文化系合宿</h3><span>24時まで練習可・パート練習6部屋 →</span></div></a>
-      <a href="training.html"><img src="assets/PhotoGallery-3.webp" alt="企業研修（コンベンションホール）" loading="lazy"><div class="c"><h3>企業研修・ワーケーション</h3><span>MAXHUB 55型・研修会場 →</span></div></a>
+      <a href="sports.html"><img src="assets/TOP_sights.webp" srcset="assets/TOP_sights-800.webp 800w, assets/TOP_sights.webp 1280w" sizes="(max-width:760px) 100vw, 50vw" alt="スポーツ合宿（白樺湖畔）" loading="lazy"><div class="c"><h3>スポーツ合宿</h3><span>映像の振り返り・O2 DOCTOR →</span></div></a>
+      <a href="music.html"><img src="assets/PhotoGallery-5.webp" srcset="assets/PhotoGallery-5-800.webp 800w, assets/PhotoGallery-5.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="音楽・文化系合宿（大広間）" loading="lazy"><div class="c"><h3>音楽・文化系合宿</h3><span>24時まで練習可・パート練習6部屋 →</span></div></a>
+      <a href="training.html"><img src="assets/PhotoGallery-3.webp" srcset="assets/PhotoGallery-3-800.webp 800w, assets/PhotoGallery-3.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="企業研修（コンベンションホール）" loading="lazy"><div class="c"><h3>企業研修・ワーケーション</h3><span>MAXHUB 55型・研修会場 →</span></div></a>
       <a href="touring.html"><img src="assets/s-venus-960.webp" alt="バイクツーリング団体（ビーナスライン）" loading="lazy"><div class="c"><h3>バイクツーリング団体</h3><span>ビーナスライン沿線の拠点 →</span></div></a>
-      <a href="travel-agent.html"><img src="assets/PhotoGallery-4.webp" alt="旅行会社ご担当者様"><div class="c"><h3>旅行会社ご担当者様</h3><span>下見・仮押さえ・見積り →</span></div></a><a href="experiences.html"><img src="assets/c-lake-birch-960.webp" alt="周辺観光・体験学習（白樺湖の湖岸）" loading="lazy"><div class="c"><h3>周辺観光・体験学習</h3><span>湖・森・星空・BBQ →</span></div></a><a href="ski.html"><img src="assets/w-kurumayama-960.webp" alt="スキー・スノーボード団体" loading="lazy"><div class="c"><h3>スキー・スノーボード団体</h3><span>車で約5分のゲレンデから →</span></div></a><a href="guide.html"><img src="assets/b-bus-front.webp" alt="幹事・引率者ガイド" loading="lazy"><div class="c"><h3>幹事・引率者ガイド</h3><span>予約の流れ・緊急連絡先・アレルギー →</span></div></a>
+      <a href="travel-agent.html"><img loading="lazy" decoding="async" src="assets/PhotoGallery-4.webp" srcset="assets/PhotoGallery-4-800.webp 800w, assets/PhotoGallery-4.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="旅行会社ご担当者様"><div class="c"><h3>旅行会社ご担当者様</h3><span>下見・仮押さえ・見積り →</span></div></a><a href="experiences.html"><img src="assets/c-lake-birch-960.webp" alt="周辺観光・体験学習（白樺湖の湖岸）" loading="lazy"><div class="c"><h3>周辺観光・体験学習</h3><span>湖・森・星空・BBQ →</span></div></a><a href="ski.html"><img src="assets/w-kurumayama-960.webp" alt="スキー・スノーボード団体" loading="lazy"><div class="c"><h3>スキー・スノーボード団体</h3><span>車で約5分のゲレンデから →</span></div></a><a href="guide.html"><img src="assets/b-bus-front.webp" alt="幹事・引率者ガイド" loading="lazy"><div class="c"><h3>幹事・引率者ガイド</h3><span>予約の流れ・緊急連絡先・アレルギー →</span></div></a>
     </div>
     <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.8rem">白樺湖の写真：663highland／<a href="https://creativecommons.org/licenses/by/2.5" target="_blank" rel="noopener noreferrer" style="border-bottom:1px solid var(--gold)">CC BY 2.5</a>　バイクツーリングの写真：Douglaspperkins／<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener noreferrer" style="border-bottom:1px solid var(--gold)">CC BY 4.0</a>（トリミング）</p>
   </div>
@@ -457,9 +459,9 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
       <span>＋ ご要望に合わせて</span>
     </div>
     <div class="steps">
-      <div class="step"><span class="sn">STEP 1</span><h4>ご相談</h4><p>「こんなこと、できる？」をお電話・フォームで。日程・人数・ご予算を伺います。</p></div>
-      <div class="step"><span class="sn">STEP 2</span><h4>演出プランご提案</h4><p>花火・表彰式・記念日…ご要望に合わせた"思い出の設計図"をご提案。</p></div>
-      <div class="step"><span class="sn">STEP 3</span><h4>当日、サプライズ</h4><p>仲間の歓声と、忘れられない瞬間を。一生モノの思い出をその手に。</p></div>
+      <div class="step"><span class="sn">STEP 1</span><h3>ご相談</h3><p>「こんなこと、できる？」をお電話・フォームで。日程・人数・ご予算を伺います。</p></div>
+      <div class="step"><span class="sn">STEP 2</span><h3>演出プランご提案</h3><p>花火・表彰式・記念日…ご要望に合わせた"思い出の設計図"をご提案。</p></div>
+      <div class="step"><span class="sn">STEP 3</span><h3>当日、サプライズ</h3><p>仲間の歓声と、忘れられない瞬間を。一生モノの思い出をその手に。</p></div>
     </div>
     <figure class="reveal" style="max-width:880px;margin:3rem auto 0"><picture><source type="image/webp" srcset="assets/gimg-fireworks-960.webp 960w, assets/gimg-fireworks-1600.webp 1600w" sizes="(max-width:880px) 100vw, 880px"><img src="assets/gimg-fireworks-1600.webp" width="1600" height="900" loading="lazy" decoding="async" alt="湖畔で打ち上げ花火を見上げる団体客（イメージ）" style="display:block;width:100%;height:auto;border-radius:4px"></picture><figcaption style="font-size:.75rem;color:rgba(255,255,255,.6);margin-top:.5rem;text-align:right">※写真は利用イメージです。</figcaption></figure>
     <p class="note">※「<strong>白樺湖メモリアル花火</strong>」は、ホテル前の白樺湖での団体向け<strong>有料オプション（事前相談制）</strong>です。卒業・優勝・周年・研修の締めくくりに。実施の可否は、季節・天候・会場・関係機関の許可や届出・専門業者の手配・安全管理等を確認のうえ決定します。学校の場合は、学校・保護者・旅行会社等の確認と事前調整が必要です。演出内容は人数・ご予算・時期により異なります。</p>
@@ -480,7 +482,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
         <div class="c"><span class="n">01</span><h3>学校・教育旅行</h3><p>大広間・コンベンションホール完備。全45室・最大10名/室で大人数も一棟貸し感覚。</p></div>
       </a>
       <a class="camp-card reveal">
-        <img src="assets/PhotoGallery-6.webp" alt="スポーツ・音楽合宿">
+        <img loading="lazy" decoding="async" src="assets/PhotoGallery-6.webp" srcset="assets/PhotoGallery-6-800.webp 800w, assets/PhotoGallery-6.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="スポーツ・音楽合宿">
         <div class="c"><span class="n">02</span><h3>スポーツ・音楽合宿</h3><p>標高1,400mの高原トレーニング。ミーティングできる大広間と、しっかり食べられる食事。</p></div>
       </a>
       <a class="camp-card reveal">
@@ -508,7 +510,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
     </div>
     <div class="proof-grid">
       <div class="proof-im">
-        <img src="assets/PhotoGallery-5.webp" alt="合奏・発表会に使える大広間（本館3階）" loading="lazy">
+        <img src="assets/PhotoGallery-5.webp" srcset="assets/PhotoGallery-5-800.webp 800w, assets/PhotoGallery-5.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="合奏・発表会に使える大広間（本館3階）" loading="lazy">
         <span class="pb">Track Record</span>
       </div>
       <div class="proof-tx">
@@ -523,7 +525,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
     </div>
     <div class="proof-grid rev">
       <div class="proof-im">
-        <img src="assets/PhotoGallery-3.webp" alt="研修会場のコンベンションホール「エトワール」" loading="lazy">
+        <img src="assets/PhotoGallery-3.webp" srcset="assets/PhotoGallery-3-800.webp 800w, assets/PhotoGallery-3.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="研修会場のコンベンションホール「エトワール」" loading="lazy">
         <span class="pb">Corporate</span>
       </div>
       <div class="proof-tx">
@@ -591,7 +593,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
     </div>
 
     <div class="row reveal">
-      <div class="img"><img src="assets/PhotoGallery-5.webp" alt="大広間"></div>
+      <div class="img"><img loading="lazy" decoding="async" src="assets/PhotoGallery-5.webp" srcset="assets/PhotoGallery-5-800.webp 800w, assets/PhotoGallery-5.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="大広間"></div>
       <div class="txt">
         <span class="no">01.</span>
         <h3>みんなで囲める、大広間</h3>
@@ -602,7 +604,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
     </div>
 
     <div class="row rev reveal">
-      <div class="img"><img src="assets/PhotoGallery-2.webp" alt="大浴場"></div>
+      <div class="img"><img loading="lazy" decoding="async" src="assets/PhotoGallery-2.webp" srcset="assets/PhotoGallery-2-800.webp 800w, assets/PhotoGallery-2.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="大浴場"></div>
       <div class="txt">
         <span class="no">02.</span>
         <h3>一日の疲れを、大浴場で</h3>
@@ -613,7 +615,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
     </div>
 
     <div class="row reveal">
-      <div class="img"><img src="assets/PhotoGallery-10.webp" alt="白樺湖と高原"></div>
+      <div class="img"><img loading="lazy" decoding="async" src="assets/PhotoGallery-10.webp" srcset="assets/PhotoGallery-10-800.webp 800w, assets/PhotoGallery-10.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="白樺湖と高原"></div>
       <div class="txt">
         <span class="no">03.</span>
         <h3>遊び場は、白樺湖まるごと</h3>
@@ -641,9 +643,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
       </div>
     </div>
     <div class="lm">
-      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=%E7%99%BD%E6%A8%BA%E6%B9%96%E3%83%AC%E3%82%A4%E3%82%AF%E3%82%B5%E3%82%A4%E3%83%89%E3%83%9B%E3%83%86%E3%83%AB%E5%B1%B1%E5%B9%B8%E9%96%A3&t=k&z=15&hl=ja&output=embed"
-        title="白樺湖レイクサイドホテル山幸閣 衛星ビュー"></iframe>
+      <button type="button" class="map-facade" data-src="https://maps.google.com/maps?q=%E7%99%BD%E6%A8%BA%E6%B9%96%E3%83%AC%E3%82%A4%E3%82%AF%E3%82%B5%E3%82%A4%E3%83%89%E3%83%9B%E3%83%86%E3%83%AB%E5%B1%B1%E5%B9%B8%E9%96%A3&t=k&z=15&hl=ja&output=embed" data-title="白樺湖レイクサイドホテル山幸閣 衛星ビュー" aria-label="Googleマップの衛星写真を表示する"><img src="assets/PhotoGallery-10-800.webp" alt="" loading="lazy" decoding="async"><span class="mf-btn">🗺 衛星写真の地図を表示</span><span class="mf-note">タップするとGoogleマップを読み込みます</span></button>
     </div>
   </div>
 </section>
@@ -658,7 +658,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
     </div>
     <div class="room-grid">
       <div class="room-card reveal">
-        <div class="ph"><img src="assets/top-room.webp" alt="和室レイクビュー"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/top-room.webp" srcset="assets/top-room-800.webp 800w, assets/top-room.webp 1280w" sizes="(max-width:760px) 100vw, 50vw" alt="和室レイクビュー"></div>
         <div class="body">
           <span class="t">Japanese Room</span>
           <h3>和室（グループ）</h3>
@@ -667,7 +667,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
         </div>
       </div>
       <div class="room-card reveal">
-        <div class="ph"><img src="assets/PhotoGallery-9.webp" alt="和洋室"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/PhotoGallery-9.webp" srcset="assets/PhotoGallery-9-800.webp 800w, assets/PhotoGallery-9.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="和洋室"></div>
         <div class="body">
           <span class="t">Japanese-Western</span>
           <h3>和洋室</h3>
@@ -676,7 +676,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
         </div>
       </div>
       <div class="room-card reveal">
-        <div class="ph"><img src="assets/plan1.webp" alt="ツインルーム"></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/plan1.webp" srcset="assets/plan1-800.webp 800w, assets/plan1.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" alt="ツインルーム"></div>
         <div class="body">
           <span class="t">Twin Room</span>
           <h3>ツインルーム</h3>
@@ -701,7 +701,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
     </div>
     <div class="plan-grid">
       <div class="plan-card reveal">
-        <div class="ph"><img src="assets/plan2.webp" alt="合宿2食付プラン"><span class="tag">2 Meals</span></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/plan2.webp" srcset="assets/plan2-800.webp 800w, assets/plan2.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" alt="合宿2食付プラン"><span class="tag">2 Meals</span></div>
         <div class="body">
           <h3>合宿スタンダード（2食付）</h3>
           <p>しっかり食べて、大広間でミーティング。学校・スポーツ・音楽合宿の定番プラン。</p>
@@ -709,7 +709,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
         </div>
       </div>
       <div class="plan-card reveal">
-        <div class="ph"><img src="assets/plan1.webp" alt="素泊まり団体プラン"><span class="tag">Eco</span></div>
+        <div class="ph"><img loading="lazy" decoding="async" src="assets/plan1.webp" srcset="assets/plan1-800.webp 800w, assets/plan1.webp 1200w" sizes="(max-width:760px) 100vw, 50vw" alt="素泊まり団体プラン"><span class="tag">Eco</span></div>
         <div class="body">
           <h3>スノボ・素泊まり団体プラン</h3>
           <p>ゲレンデ・ツーリング中心の旅に。費用を抑えて、夜は仲間との時間をたっぷり。</p>
@@ -717,7 +717,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
         </div>
       </div>
       <div class="plan-card feat reveal">
-        <div class="ph" style="position:relative"><img src="assets/fireworks.png" alt="湖畔の打ち上げ花火（イメージ）"><span style="position:absolute;right:.6rem;bottom:.6rem;z-index:3;background:rgba(0,0,0,.55);color:#fff;font-size:.66rem;padding:.15rem .5rem;border-radius:2px;letter-spacing:.05em">イメージ</span><span class="tag hot">Signature</span></div>
+        <div class="ph" style="position:relative"><img loading="lazy" decoding="async" src="assets/fireworks-960.webp" alt="湖畔の打ち上げ花火（イメージ）"><span style="position:absolute;right:.6rem;bottom:.6rem;z-index:3;background:rgba(0,0,0,.55);color:#fff;font-size:.66rem;padding:.15rem .5rem;border-radius:2px;letter-spacing:.05em">イメージ</span><span class="tag hot">Signature</span></div>
         <div class="body">
           <h3>★ 思い出演出パッケージ</h3>
           <p>宿泊＋サプライズ演出（花火・表彰式・記念日 等）をまるごとコーディネート。卒業・優勝・周年に。</p>
@@ -737,24 +737,24 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
       <div class="divider"></div>
     </div>
     <div class="masonry reveal">
-      <img src="assets/exterior-buses.webp" alt="山幸閣の外観と団体の大型観光バス" loading="lazy" width="1800" height="1012">
+      <img src="assets/exterior-buses.webp" srcset="assets/exterior-buses-800.webp 800w, assets/exterior-buses.webp 1800w" sizes="(max-width:760px) 100vw, 50vw" alt="山幸閣の外観と団体の大型観光バス" loading="lazy" width="1800" height="1012">
       <img src="assets/lake-pano-960.webp" alt="青空の下の白樺湖と山並み" loading="lazy" width="960" height="540">
       <img src="assets/c-lake-autumn-960.webp" alt="紅葉の白樺湖と蓼科山" loading="lazy" width="960" height="640">
-      <img src="assets/PhotoGallery-10.webp" alt="白樺湖空撮">
+      <img loading="lazy" decoding="async" src="assets/PhotoGallery-10.webp" srcset="assets/PhotoGallery-10-800.webp 800w, assets/PhotoGallery-10.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="白樺湖空撮">
       <img src="assets/s-kirigamine.webp" alt="ニッコウキスゲが咲く霧ヶ峰高原" loading="lazy" width="960" height="533">
-      <img src="assets/PhotoGallery-5.webp" alt="大広間">
+      <img loading="lazy" decoding="async" src="assets/PhotoGallery-5.webp" srcset="assets/PhotoGallery-5-800.webp 800w, assets/PhotoGallery-5.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="大広間">
       <img src="assets/s-venus-960.webp" alt="高原を貫くビーナスライン" loading="lazy" width="960" height="533">
       <img src="assets/w-lake-winter-960.webp" alt="ゲレンデから望む冬の白樺湖" loading="lazy" width="960" height="627">
-      <img src="assets/PhotoGallery-6.webp" alt="ニッコウキスゲ咲く高原">
-      <img src="assets/PhotoGallery-2.webp" alt="大浴場">
-      <img src="assets/PhotoGallery-4.webp" alt="湖畔のホテル外観">
-      <img src="assets/PhotoGallery-3.webp" alt="コンベンションホール">
-      <img src="assets/PhotoGallery-7.webp" alt="ロビー">
-      <img src="assets/PhotoGallery-9.webp" alt="客室から望む湖">
-      <img src="assets/TOP_facility.webp" alt="ラウンジ">
-      <img src="assets/PhotoGallery-1.webp" alt="客室アメニティ">
-      <img src="assets/top-room.webp" alt="レイクビュー客室">
-      <img src="assets/TOP_sights.webp" alt="周辺の観光">
+      <img loading="lazy" decoding="async" src="assets/PhotoGallery-6.webp" srcset="assets/PhotoGallery-6-800.webp 800w, assets/PhotoGallery-6.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="ニッコウキスゲ咲く高原">
+      <img loading="lazy" decoding="async" src="assets/PhotoGallery-2.webp" srcset="assets/PhotoGallery-2-800.webp 800w, assets/PhotoGallery-2.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="大浴場">
+      <img loading="lazy" decoding="async" src="assets/PhotoGallery-4.webp" srcset="assets/PhotoGallery-4-800.webp 800w, assets/PhotoGallery-4.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="湖畔のホテル外観">
+      <img loading="lazy" decoding="async" src="assets/PhotoGallery-3.webp" srcset="assets/PhotoGallery-3-800.webp 800w, assets/PhotoGallery-3.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="コンベンションホール">
+      <img loading="lazy" decoding="async" src="assets/PhotoGallery-7.webp" srcset="assets/PhotoGallery-7-800.webp 800w, assets/PhotoGallery-7.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="ロビー">
+      <img loading="lazy" decoding="async" src="assets/PhotoGallery-9.webp" srcset="assets/PhotoGallery-9-800.webp 800w, assets/PhotoGallery-9.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="客室から望む湖">
+      <img loading="lazy" decoding="async" src="assets/TOP_facility.webp" srcset="assets/TOP_facility-800.webp 800w, assets/TOP_facility.webp 1280w" sizes="(max-width:760px) 100vw, 50vw" alt="ラウンジ">
+      <img loading="lazy" decoding="async" src="assets/PhotoGallery-1.webp" srcset="assets/PhotoGallery-1-800.webp 800w, assets/PhotoGallery-1.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="客室アメニティ">
+      <img loading="lazy" decoding="async" src="assets/top-room.webp" srcset="assets/top-room-800.webp 800w, assets/top-room.webp 1280w" sizes="(max-width:760px) 100vw, 50vw" alt="レイクビュー客室">
+      <img loading="lazy" decoding="async" src="assets/TOP_sights.webp" srcset="assets/TOP_sights-800.webp 800w, assets/TOP_sights.webp 1280w" sizes="(max-width:760px) 100vw, 50vw" alt="周辺の観光">
     </div>
     <p style="font-size:.7rem;color:var(--muted);text-align:right;margin-top:.6rem">紅葉の白樺湖：Raita Futo／<a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>（<a href="https://commons.wikimedia.org/wiki/File:Lake_Shirakaba_(49785032782).jpg" target="_blank" rel="noopener noreferrer">出典</a>）　ビーナスライン：Douglaspperkins／<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>（トリミング）</p>
   </div>
@@ -821,7 +821,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
       </div>
       <div class="reveal">
         <div class="accent-box">
-          <h4>合宿・団体・サプライズのご相談</h4>
+          <h3>合宿・団体・サプライズのご相談</h3>
           <div class="big-tel">0266-68-2021</div>
           <div class="hours">受付時間 9:00 - 21:00　FAX 0266-68-2092<br>人数・日程・ご予算、サプライズ演出のご希望までお気軽に。<br>学校・スポーツ・音楽合宿、スノボ・バイク団体、大歓迎です。</div>
           <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=長野県茅野市北山3418-32" target="_blank" rel="noopener">Google Map で見る</a>
@@ -844,14 +844,14 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
         </address>
       </div>
       <div class="foot-col">
-        <h5>施設・お部屋</h5>
+        <p class="fh">施設・お部屋</p>
         <a href="rooms.html">客室</a>
         <a href="facilities.html">館内施設</a>
         <a href="maxhub.html">ミーティングルーム（MAXHUB）</a>
         <a href="education.html">教育旅行・合宿</a>
       </div>
       <div class="foot-col">
-        <h5>ご案内</h5>
+        <p class="fh">ご案内</p>
         <a href="#surprise">サプライズ演出</a>
         <a href="guide.html">幹事・引率者ガイド</a>
         <a href="ski.html">スキー・スノーボード団体</a>
@@ -861,7 +861,7 @@ footer{background:#141d1b;color:#9ba39f;padding:5rem 0 2rem;font-size:.82rem}
       </div>
     </div>
     <div class="foot-bottom">
-      <a href="privacy.html" style="color:#6b736f">プライバシーポリシー</a>
+      <a href="privacy.html" style="color:#9ba39f">プライバシーポリシー</a>
       <span>© Shirakabako Lakeside Hotel Sankokaku. All Rights Reserved.</span>
       <span>Nagano · Shirakabako · Memories by the Lake</span>
     </div>
@@ -906,6 +906,9 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:.2}).observe(sec);
 })();
 
+
+// 地図は押したときだけ読み込む（表示速度と、Googleへの通信を最小にするため）
+document.querySelectorAll(".map-facade").forEach(function(b){b.addEventListener("click",function(){var f=document.createElement("iframe");f.src=b.dataset.src;f.title=b.dataset.title;f.loading="lazy";f.referrerPolicy="no-referrer-when-downgrade";f.allowFullscreen=true;b.replaceWith(f);});});
 // 数字は確定値をHTMLに直接記載（JS無効・reduced-motionでも0室にならない）。0からのカウント演出は行わない。
 </script>
 
@@ -914,6 +917,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   <a class="sc-tel" href="tel:0266-68-2021" data-ev="tel_click">☎ 電話で相談</a>
   <a class="sc-form" href="contact.html" data-ev="inquiry_cta_click">空室・見積り相談</a>
 </div>
-<script src="assets/site.js"></script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

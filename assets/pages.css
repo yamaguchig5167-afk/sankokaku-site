@@ -1,5 +1,5 @@
 /* 山幸閣 ターゲット別ページ 共通スタイル（既存デザイン＝Shippori Mincho / teal+gold+ember を継承） */
-:root{--ink:#1b2826;--ink-soft:#33433f;--paper:#f6f3ec;--paper-2:#efe9dd;--teal:#2f5d57;--teal-light:#4f827a;--gold:#b29a63;--ember:#d8743f;--text:#2b2a26;--muted:#6f6b62;--serif-en:'Cormorant Garamond',serif;--serif-jp:'Shippori Mincho',serif;--sans-jp:'Noto Sans JP',sans-serif;--label:'Jost',sans-serif}
+:root{--ink:#1b2826;--ink-soft:#33433f;--paper:#f6f3ec;--paper-2:#efe9dd;--teal:#2f5d57;--teal-light:#4f827a;--gold:#b29a63;--ember:#ad5424;--text:#2b2a26;--muted:#5f5b53;--serif-en:'Cormorant Garamond',serif;--serif-jp:'Shippori Mincho',serif;--sans-jp:'Noto Sans JP',sans-serif;--label:'Jost',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans-jp);color:var(--text);background:var(--paper);line-height:1.9;font-weight:300;letter-spacing:.04em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -53,7 +53,7 @@ header.scrolled .btn-reserve:hover{background:var(--ember);border-color:var(--em
 .divider{width:40px;height:1px;background:var(--gold);margin:1.3rem auto 0}
 /* イントロ */
 .intro{padding:5.5rem 0 4rem;text-align:center}
-.intro .label{color:var(--gold);display:block;margin-bottom:1.5rem}
+.intro .label{color:#7d6a3c;display:block;margin-bottom:1.5rem}
 .intro h2{font-family:var(--serif-jp);font-weight:500;font-size:clamp(1.4rem,3vw,2rem);line-height:2;letter-spacing:.09em;color:var(--ink)}
 .intro p{max-width:660px;margin:1.7rem auto 0;color:var(--muted);font-size:.93rem;line-height:2.4}
 /* ポイントグリッド */
@@ -107,9 +107,9 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 .foot-brand .jp{font-family:var(--serif-jp);font-size:1.25rem;color:#fff;letter-spacing:.12em;font-weight:600}
 .foot-brand .en{font-family:var(--label);font-size:.6rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-top:.6rem;display:block}
 .foot-brand address{font-style:normal;margin-top:1.4rem;line-height:2}
-.foot-col h5{font-family:var(--serif-jp);color:#fff;font-size:.88rem;letter-spacing:.14em;margin-bottom:1.1rem;font-weight:500}
+.foot-col h5,.foot-col .fh{font-family:var(--serif-jp);color:#fff;font-size:.88rem;letter-spacing:.14em;margin-bottom:1.1rem;font-weight:500}
 .foot-col a{display:block;padding:.38rem 0;color:#9ba39f;transition:color .3s}.foot-col a:hover{color:var(--gold)}
-.foot-bottom{display:flex;justify-content:space-between;padding-top:1.8rem;font-family:var(--label);font-size:.64rem;letter-spacing:.16em;color:#6b736f;flex-wrap:wrap;gap:1rem}
+.foot-bottom{display:flex;justify-content:space-between;padding-top:1.8rem;font-family:var(--label);font-size:.64rem;letter-spacing:.16em;color:#9ba39f;flex-wrap:wrap;gap:1rem}
 /* リビール */
 .reveal{opacity:0;transform:translateY(38px);transition:opacity 1s,transform 1s}.reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.hero .bg{animation:none;transform:none}.reveal{opacity:1!important;transform:none!important}}
@@ -202,7 +202,7 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 /* 注意ボックス */
 .nbox{max-width:920px;margin:2rem auto 0;background:#fff;border-left:3px solid var(--gold);border-radius:4px;padding:1.2rem 1.4rem;font-size:.86rem;color:var(--ink-soft);line-height:1.95}
 .nbox.warn{border-left-color:var(--ember)}
-.nbox h4{font-family:var(--serif-jp);font-weight:600;color:var(--ink);margin-bottom:.45rem;font-size:.98rem}
+.nbox h3,.nbox h4{font-family:var(--serif-jp);font-weight:600;color:var(--ink);margin-bottom:.45rem;font-size:.98rem}
 .nbox ul,.nbox ol{padding-left:1.3em}.nbox li{margin:.15rem 0}.nbox p+p{margin-top:.5rem}
 .nbox .o2{display:grid;grid-template-columns:200px 1fr;gap:1.3rem;align-items:start}
 .nbox .o2 img{width:100%;height:auto;border-radius:4px}
