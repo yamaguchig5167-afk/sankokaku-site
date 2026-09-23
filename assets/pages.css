@@ -163,3 +163,92 @@ footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 .spot dd a{color:var(--teal);border-bottom:1px solid var(--gold)}
 .spot .warn{color:var(--ember)}
 @media(max-width:900px){.spot-grid{grid-template-columns:1fr}}
+
+/* ===== v2（団体パンフ2026-09反映）共通部品 ===== */
+.sec{padding:4.5rem 0}.sec.alt{background:var(--paper-2)}
+.lead{max-width:760px;margin:-1.6rem auto 2.2rem;text-align:center;color:var(--muted);font-size:.9rem;line-height:2.1}
+.lk{color:var(--teal);border-bottom:1px solid var(--gold);white-space:nowrap}
+.sm{font-size:.76rem;color:var(--muted);margin-top:.5rem}
+.src{max-width:1100px;margin:1rem auto 0;font-size:.72rem;color:var(--muted);line-height:1.9}
+.src a{color:var(--teal);border-bottom:1px solid var(--gold)}
+.subh{text-align:center;font-family:var(--serif-jp);font-weight:600;font-size:1rem;color:var(--ink);margin:2.6rem 0 1rem;letter-spacing:.05em}
+/* 写真グリッド */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2rem}
+.pgrid figure{margin:0;background:#fff;border-radius:5px;overflow:hidden;border:1px solid #eee6d8}
+.pgrid img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.pgrid figcaption{font-size:.78rem;color:var(--ink-soft);padding:.6rem .8rem;line-height:1.6}
+.pgrid figcaption small{display:block;color:var(--muted);font-size:.68rem;margin-top:.15rem}
+.pgrid figcaption a{color:var(--teal);border-bottom:1px solid var(--gold)}
+.figblk figcaption a{color:var(--teal);border-bottom:1px solid var(--gold)}
+/* モデル行程 */
+.plan{max-width:1040px;margin:0 auto;background:#fff;border-radius:6px;border:1px solid #eee6d8;padding:2rem 2.2rem;box-shadow:0 18px 50px -38px rgba(0,0,0,.25)}
+.plan h3{font-family:var(--serif-jp);font-weight:600;font-size:1.15rem;color:var(--ink);margin-bottom:1.3rem;letter-spacing:.05em}
+.plan h3 small{font-family:var(--label);font-size:.7rem;letter-spacing:.18em;color:var(--ember);margin-left:.7rem}
+.plan-days{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem}
+.pday-l{font-family:var(--serif-jp);font-weight:600;color:var(--teal);border-bottom:1px solid var(--gold);padding-bottom:.4rem;margin-bottom:.5rem}
+.pday ol{list-style:none}
+.pday li{display:grid;grid-template-columns:3.3em 1fr;gap:.4rem;font-size:.84rem;color:var(--ink-soft);line-height:1.7;padding:.3rem 0}
+.pday time{font-family:var(--label);color:var(--gold);font-weight:500}
+.pday li.opt span{color:#a4501f}
+.plan-note{font-size:.76rem;color:var(--muted);margin-top:1.2rem;line-height:1.8}
+/* チェックリスト */
+.clist{max-width:920px;margin:0 auto;list-style:none;background:#fff;border-radius:6px;border:1px solid #eee6d8;overflow:hidden}
+.clist li{display:grid;grid-template-columns:4.6em 9.5em 1fr;gap:.9rem;align-items:start;padding:.9rem 1.3rem;border-bottom:1px solid #ece5d6;font-size:.86rem;color:var(--ink-soft);line-height:1.8}
+.clist li:last-child{border-bottom:none}
+.clist b{font-family:var(--serif-jp);font-weight:600;color:var(--ink)}
+.tg{display:inline-block;font-size:.68rem;padding:.12rem .45rem;border-radius:3px;text-align:center;font-weight:500;letter-spacing:.04em;line-height:1.6}
+.tg.ok{background:#e3eeeb;color:#24504a}.tg.ask{background:#fbeadf;color:#8f4318}.tg.no{background:#ece8e1;color:#4f4a43}.tg.info{background:#e9edf4;color:#34405a}
+@media(max-width:640px){.clist li{grid-template-columns:4.6em 1fr;gap:.35rem .8rem}.clist li .t{grid-column:1/-1}}
+/* 注意ボックス */
+.nbox{max-width:920px;margin:2rem auto 0;background:#fff;border-left:3px solid var(--gold);border-radius:4px;padding:1.2rem 1.4rem;font-size:.86rem;color:var(--ink-soft);line-height:1.95}
+.nbox.warn{border-left-color:var(--ember)}
+.nbox h4{font-family:var(--serif-jp);font-weight:600;color:var(--ink);margin-bottom:.45rem;font-size:.98rem}
+.nbox ul,.nbox ol{padding-left:1.3em}.nbox li{margin:.15rem 0}.nbox p+p{margin-top:.5rem}
+.nbox .o2{display:grid;grid-template-columns:200px 1fr;gap:1.3rem;align-items:start}
+.nbox .o2 img{width:100%;height:auto;border-radius:4px}
+@media(max-width:640px){.nbox .o2{grid-template-columns:1fr}.nbox .o2 img{max-width:240px}}
+/* ステップ */
+.steps6{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;max-width:1100px;margin:0 auto}
+.steps6.four{grid-template-columns:repeat(4,1fr)}
+.st{background:#fff;border:1px solid #eee6d8;border-radius:6px;padding:1.4rem 1.5rem}
+.st .sn{font-family:var(--serif-en);font-size:1.9rem;color:var(--gold);line-height:1}
+.st h3{font-family:var(--serif-jp);font-weight:600;font-size:1.02rem;color:var(--ink);margin:.45rem 0 .4rem;line-height:1.5}
+.st p{font-size:.83rem;color:var(--muted);line-height:1.9}
+.st .dl{display:inline-block;margin-top:.6rem;font-size:.7rem;color:#8f4318;background:#fbeadf;border-radius:3px;padding:.1rem .5rem}
+@media(max-width:900px){.steps6,.steps6.four{grid-template-columns:1fr}}
+/* 緊急番号 */
+.emg{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:0 auto 2rem}
+.emg a{display:block;background:#fff;border:1px solid #eee6d8;border-radius:6px;padding:1.2rem 1rem;text-align:center}
+.emg .n{font-family:var(--sans-jp);font-size:2rem;line-height:1.1;color:var(--ink);font-weight:700;letter-spacing:.02em}
+.emg .red .n{color:#b3261e}
+.emg .l{font-family:var(--serif-jp);font-weight:600;font-size:.9rem;margin-top:.45rem;color:var(--ink)}
+.emg .s{font-size:.7rem;color:var(--muted);line-height:1.6;margin-top:.3rem}
+@media(max-width:900px){.emg{grid-template-columns:1fr 1fr}}
+/* 表 */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:1100px;margin:0 auto}
+.dtable{width:100%;min-width:640px;border-collapse:collapse;background:#fff;font-size:.84rem}
+.dtable th,.dtable td{border:1px solid #ece5d6;padding:.75rem .9rem;text-align:left;vertical-align:top;line-height:1.7;color:var(--ink-soft)}
+.dtable thead th,.dtable tbody th{background:#faf8f3;font-family:var(--serif-jp);color:var(--teal);font-weight:600;white-space:nowrap}
+.dtable td small{display:block;color:var(--muted);font-size:.72rem;margin-top:.2rem}
+.dtable a{color:var(--teal);border-bottom:1px solid var(--gold)}
+/* チップ・リンク */
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;max-width:980px;margin:0 auto}
+.chips span{background:#fff;border:1px solid var(--gold);border-radius:30px;padding:.4rem 1rem;font-size:.85rem;color:var(--ink)}
+.links{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:0 auto}
+.links a{background:#fff;border:1px solid #eee6d8;border-radius:6px;padding:1.2rem 1.3rem;transition:border-color .3s,transform .3s}
+.links a:hover{border-color:var(--gold);transform:translateY(-3px)}
+.links b{display:block;font-family:var(--serif-jp);font-weight:600;color:var(--ink);font-size:.98rem}
+.links span{font-size:.76rem;color:var(--muted);line-height:1.7}
+@media(max-width:900px){.links{grid-template-columns:1fr 1fr}}@media(max-width:520px){.links{grid-template-columns:1fr}}
+.dlbox{max-width:920px;margin:2rem auto 0;text-align:center}
+.dlbox p{font-size:.8rem;color:var(--muted);margin-top:.8rem;line-height:1.9}
+.dlbtn{display:inline-block;background:var(--teal);color:#fff;padding:.95rem 1.8rem;border-radius:3px;font-size:.92rem;transition:background .3s}
+.dlbtn:hover{background:var(--ember)}
+/* 周辺スポットの写真 */
+.spot .sph{margin:-1.6rem -1.7rem 1.1rem}
+.spot .sph img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px 6px 0 0}
+.spot .sph figcaption{font-size:.68rem;color:var(--muted);padding:.35rem 1rem 0;text-align:right;line-height:1.6}
+.spot .sph figcaption a{color:var(--teal)}
+@media print{header,.topbar,.sticky-cta,.hero,.cta,footer{display:none!important}.reveal{opacity:1!important;transform:none!important}.sec{padding:1rem 0}}
+.swipe{display:none;font-size:.72rem;color:var(--muted);text-align:right;margin:0 0 .4rem}
+@media(max-width:700px){.swipe{display:block}}

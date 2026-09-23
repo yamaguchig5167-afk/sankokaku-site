@@ -29,3 +29,6 @@ textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* スマホでは上部の電話帯を隠す（固定ヘッダーと重なるため。電話は下部の固定CTAから） */
+@media(max-width:768px){.topbar{display:none}}
