@@ -95,3 +95,17 @@
   - GitHub Pages のプロジェクトサイトでは、検索エンジンはドメイン直下の robots.txt しか読まないため、このリポジトリの robots.txt はサイトマップの通知に使えない
 - [ ] 独自ドメイン（sankokaku.com）へ移行するときは、github.io 側から301リダイレクトできないため、canonical と sitemap のURLを新ドメインに書き換え、Search Console でアドレス変更を行う
 - [ ] 旧 sankokaku.com の旧表記（65室・乗用車100台・バス20台・旧住所）が検索結果で新サイトと並ぶ。切り替え方針は確認依頼書 No.24 の回答で決める
+
+## 10. 2026-09-24 画像の実写真化（出典と権利）
+
+| ファイル | 内容 | 出典・権利 |
+|---|---|---|
+| c-birch-*.webp | 八ヶ岳の白樺の森 | Raita Futo／CC BY 2.0（Wikimedia Commons「Nagano's White birch forest (53108290236).jpg」） |
+| c-kirigamine-*.webp | 霧ヶ峰高原 | SHori／CC BY 4.0（Commons「Nagano Kirigamine xl.jpg」・FIND/47） |
+| c-lake-birch-*.webp | 白樺湖の湖岸と白樺 | 663highland／CC BY 2.5（Commons「Lake Shirakaba22n4272.jpg」） |
+| c-lake-autumn-*.webp | 紅葉の白樺湖と蓼科山 | Raita Futo／CC BY 2.0（Commons「Lake Shirakaba (49785032782).jpg」） |
+| w-lake-winter-*.webp | ゲレンデから望む冬の白樺湖 | 山口さん支給（2026-09-23 使用OK） |
+| mh-room.webp | MAXHUBの設置例 | ナイスモバイル株式会社 提供（使用承諾済み・設置例と明記） |
+
+- CC BY の写真は、掲載箇所に撮影者名・ライセンス・出典を表示している（改変はサイズ変更のみ）
+- 実写真が無い場面（打ち上げ花火、MAXHUBの使用風景、星空観察、BBQ）はAI画像のまま「イメージ」と表示。**実際の団体利用の写真が手に入り次第差し替える**（確認依頼書 No.22）
