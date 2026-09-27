@@ -10,7 +10,7 @@
   }
   .sticky-cta a{
     flex:1;display:flex;align-items:center;justify-content:center;gap:.4rem;
-    padding:.95rem .5rem;font-family:'Noto Sans JP',sans-serif;font-weight:500;
+    padding:.95rem .5rem;font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo UI",Meiryo,"Noto Sans CJK JP",sans-serif;font-weight:500;
     font-size:.92rem;letter-spacing:.02em;text-decoration:none;min-height:56px;
   }
   .sticky-cta .sc-tel{background:#2f5d57;color:#fff}

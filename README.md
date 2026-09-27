@@ -27,7 +27,7 @@
 
 ## 技術
 - フレームワーク・ビルドツールなし（素のHTML/CSS/JS・GitHub Pages）
-- フォント：Shippori Mincho / Cormorant Garamond / Noto Sans JP / Jost
+- フォント：Shippori Mincho / Cormorant Garamond / Jost（Webフォント）、本文は端末標準の日本語ゴシック（ヒラギノ角ゴ／游ゴシックUI／Noto Sans CJK）
 - 画像は `assets/` にローカル保持（外部依存なし）
 
 ## 公開URL
