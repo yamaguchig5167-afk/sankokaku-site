@@ -120,5 +120,6 @@ PageSpeed Insights（Google公式・スマホ・公開URL）トップページ�
 
 **これ以上上げる場合の選択肢（見た目に関わるため未実施）**
 - [x] 本文フォント（Noto Sans JP）を端末標準の日本語フォントに替える（2026-09-27 山口さんOK）：iPhone/Mac＝ヒラギノ角ゴ、Windows＝游ゴシックUI、Android＝Noto Sans CJK。本文の太さは300→400（端末標準の細字は画面で薄くなるため）。見出しの明朝（Shippori Mincho）と英字（Cormorant Garamond／Jost）はWebフォントのまま
+  - 2026-09-27 計測：ローカルLighthouse（公開URL・スマホ）でトップ **89点**（FCP 2.8秒・LCP 3.0秒・TBT 0）。同日のPageSpeed Insightsは56点だったが、直前に「URLを解決できません」が2回出ており、Google側からgithub.ioへの通信が不安定な時間帯の値（FCP 9.3秒）のため参考外。日を改めて再計測する
 - [ ] トップページの写真点数を減らす（ギャラリーを別ページへ）
 - [ ] 独自ドメイン移行時にCDN（Cloudflare等）を前段に置き、画像のキャッシュ期間を延ばす（GitHub Pagesは10分固定）
