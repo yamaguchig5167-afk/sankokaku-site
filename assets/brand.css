@@ -204,7 +204,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
 .pt .ic,.fcard .ic,.gitem .ic,.scard .ic{display:none}
 /* 特長カード → 罫線で区切る一覧に */
 .pts-grid{gap:2.4rem 2.8rem}
-.pt,.fcard,.scard{background:transparent!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;padding:1.3rem 0 0!important;transform:none!important}
+.pt,.fcard,.scard{background:transparent!important;box-shadow:none!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;padding:1.3rem 0 0!important;transform:none!important}
 .pts.dark .pt{border-top-color:var(--line-light)!important}
 .gitem{border:0!important;border-top:1px solid var(--line-light)!important;border-radius:0!important;padding:1.2rem 0 0!important;text-align:left!important}
 /* ヒーロー内の主ボタン・CTA帯のボタン（暗い写真の上） */
@@ -215,6 +215,16 @@ html:not(.js) .reveal{opacity:1;transform:none}
 /* 本文の読みやすさ */
 .lead,.intro p{letter-spacing:.05em}
 section[id]{scroll-margin-top:84px}
+
+/* 下層ページの余白（トップと同じ尺度にそろえる。スマホでは小さく） */
+section.intro{padding-block:clamp(48px,6vw,84px) clamp(32px,4vw,60px)}
+section.sec{padding-block:clamp(44px,5vw,72px)}
+section.pts,section.facts,section.frow-wrap{padding-bottom:clamp(44px,5vw,84px)}
+section.cta{padding-block:clamp(56px,6vw,88px)}
+section.use,section.sports,section.share,section.place,section.notes,section.feat,section.faq,
+section.facilities,section.facil,section.exp,section.equip,section.dine,section.course,section.ba,section.v2fac{padding-block:clamp(48px,5.6vw,88px)}
+.sec-head{margin-bottom:clamp(28px,3.4vw,44px)}
+.has-solid-header main#main{padding-top:clamp(28px,4vw,56px)}
 
 /* ---------- 9. 動きを控えたい方へ ---------- */
 @media (prefers-reduced-motion:reduce){
