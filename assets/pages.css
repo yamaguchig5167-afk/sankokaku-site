@@ -1,5 +1,5 @@
 /* 山幸閣 ターゲット別ページ 共通スタイル（既存デザイン＝Shippori Mincho / teal+gold+ember を継承） */
-:root{--ink:#1b2826;--ink-soft:#33433f;--paper:#f6f3ec;--paper-2:#efe9dd;--teal:#2f5d57;--teal-light:#4f827a;--gold:#b29a63;--ember:#ad5424;--text:#2b2a26;--muted:#5f5b53;--serif-en:'Cormorant Garamond',serif;--serif-jp:'Shippori Mincho',serif;--sans-jp:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo UI",Meiryo,"Noto Sans CJK JP",sans-serif;--label:'Jost',sans-serif}
+:root{--ink:#183229;--ink-soft:#2e3a36;--paper:#f5f2ea;--paper-2:#eeeae0;--teal:#183229;--teal-light:#4a6358;--gold:#b69b67;--ember:#7a6337;--text:#1e2321;--muted:#5a605c;--serif-en:'Cormorant Garamond',serif;--serif-jp:'Shippori Mincho',serif;--sans-jp:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo UI",Meiryo,"Noto Sans CJK JP",sans-serif;--label:'Jost',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans-jp);color:var(--text);background:var(--paper);line-height:1.9;font-weight:400;letter-spacing:.04em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -13,7 +13,7 @@ h1,h2,h3,h4,h5,.jp-title,.brand .jp{font-feature-settings:"palt"}
 .topbar .loc{opacity:.85}.topbar .tel b{color:#fff;font-size:.85rem;letter-spacing:.1em}
 /* ヘッダー */
 header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .5s,padding .5s,box-shadow .5s;padding:1.3rem max(5vw,1.5rem)}
-header.scrolled{background:rgba(246,243,236,.96);backdrop-filter:blur(8px);padding:.8rem max(5vw,1.5rem);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+header.scrolled{background:rgba(250,249,246,.96);backdrop-filter:blur(8px);padding:.8rem max(5vw,1.5rem);box-shadow:0 1px 0 rgba(0,0,0,.06)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
 .brand{display:flex;flex-direction:column;line-height:1.1}
 .brand .jp{font-family:var(--serif-jp);font-weight:600;font-size:1.12rem;letter-spacing:.14em;color:#fff}
@@ -53,7 +53,7 @@ header.scrolled .btn-reserve:hover{background:var(--ember);border-color:var(--em
 .divider{width:40px;height:1px;background:var(--gold);margin:1.3rem auto 0}
 /* イントロ */
 .intro{padding:5.5rem 0 4rem;text-align:center}
-.intro .label{color:#7d6a3c;display:block;margin-bottom:1.5rem}
+.intro .label{color:#7a6337;display:block;margin-bottom:1.5rem}
 .intro h2{font-family:var(--serif-jp);font-weight:500;font-size:clamp(1.4rem,3vw,2rem);line-height:2;letter-spacing:.09em;color:var(--ink)}
 .intro p{max-width:660px;margin:1.7rem auto 0;color:var(--muted);font-size:.93rem;line-height:2.4}
 /* ポイントグリッド */
@@ -65,7 +65,7 @@ header.scrolled .btn-reserve:hover{background:var(--ember);border-color:var(--em
 .pt h3{font-family:var(--serif-jp);font-weight:600;font-size:1.1rem;letter-spacing:.04em;color:var(--ink);margin-bottom:.5rem;line-height:1.5}
 .pt p{font-size:.86rem;color:var(--muted);line-height:2}
 .pts.dark{background:var(--ink)}
-.pts.dark .pt{background:#22312e;border-color:rgba(255,255,255,.08)}
+.pts.dark .pt{background:#21423a;border-color:rgba(255,255,255,.08)}
 .pts.dark .pt h3{color:#fff}.pts.dark .pt p{color:rgba(255,255,255,.72)}
 /* 交互フィーチャー */
 .frow-wrap{padding:2rem 0 5rem}
@@ -102,7 +102,7 @@ header.scrolled .btn-reserve:hover{background:var(--ember);border-color:var(--em
 .cta .btn-lg.ghost{border:1px solid rgba(255,255,255,.7);color:#fff}.cta .btn-lg.ghost:hover{background:#fff;color:var(--ink)}
 .cta .note{margin-top:1.4rem;font-size:.76rem;color:rgba(255,255,255,.6)}
 /* フッター */
-footer{background:#141d1b;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
+footer{background:#10231c;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3rem;padding-bottom:2.6rem;border-bottom:1px solid rgba(255,255,255,.08)}
 .foot-brand .jp{font-family:var(--serif-jp);font-size:1.25rem;color:#fff;letter-spacing:.12em;font-weight:600}
 .foot-brand .en{font-family:var(--label);font-size:.6rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-top:.6rem;display:block}
