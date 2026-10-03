@@ -45,6 +45,7 @@ GUIDE = [
     ("guide.html", "幹事・引率者ガイド"),
     ("faq.html", "よくあるご質問"),
     ("index.html#before", "ご予約前のご確認"),
+    ("arrival.html", "ご到着までのご案内"),
 ]
 
 
