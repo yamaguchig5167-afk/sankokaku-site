@@ -226,6 +226,13 @@ section.facilities,section.facil,section.exp,section.equip,section.dine,section.
 .sec-head{margin-bottom:clamp(28px,3.4vw,44px)}
 .has-solid-header main#main{padding-top:clamp(28px,4vw,56px)}
 
+/* 相談フォーム前の確認事項 */
+.lb-prebook{margin:1.6rem 0 2rem;padding:1.2rem 1.4rem;background:var(--warm-white);border:1px solid var(--line);border-left:3px solid var(--brass-ink);font-size:.88rem;line-height:1.85}
+.lb-prebook__h{font-family:var(--f-serif-jp);font-weight:500;letter-spacing:.08em;color:var(--forest);margin-bottom:.5rem}
+.lb-prebook ul{padding-left:1.2em;margin:0 0 .6rem}
+.lb-prebook li{margin:.15rem 0}
+.lb-prebook a{color:var(--forest);text-decoration:underline;text-underline-offset:3px}
+
 /* ---------- 9. 動きを控えたい方へ ---------- */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
