@@ -34,7 +34,7 @@ PURPOSE = [
     ("training.html", "企業研修・ワーケーション"),
     ("ski.html", "スキー・スノーボード"),
     ("touring.html", "バイクツーリング"),
-    ("memory.html", "思い出演出"),
+    ("memory.html", "白樺湖メモリアル花火"),
     ("travel-agent.html", "旅行会社の方へ"),
 ]
 GUIDE = [
