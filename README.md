@@ -9,8 +9,10 @@ STAY／CAMP／WORK／PLAY／MEMORY の5つの過ごし方として見せ、**空
 ## ページ構成
 | ファイル | 内容 |
 |---|---|
-| `index.html` | トップ（Hero → About → 5つの過ごし方 → 思い出演出 → 立地 → 団体利用 → 研修・ワーケーション → 客室と施設 → 数字 → 四季 → 写真 → 相談 → ご案内） |
-| `memory.html` | 思い出演出（花火・表彰式・記念日） |
+| `index.html` | トップ（団体・合宿専用：Hero → 入口（旅行会社／幹事）と資料 → About → 目的別 → 数字 → 客室と施設 → ご予約の前に → 立地 → 四季 → 花火 → 相談 → ご案内） |
+| `downloads.html` | **資料ダウンロード**（総合パンフ・旅行会社様向け・チラシ6種・アレルギー確認書） |
+| `arrival.html` | ご到着までのご案内（セルフスタイルの宿・持ち物・館内の決まり） |
+| `memory.html` | 白樺湖メモリアル花火（団体向け・事前相談制） |
 | `education.html` / `sports.html` / `music.html` / `training.html` / `touring.html` / `ski.html` | 目的別ページ |
 | `rooms.html` / `facilities.html` / `maxhub.html` / `experiences.html` / `access.html` | 滞在・施設・周辺・アクセス |
 | `travel-agent.html` / `guide.html` / `faq.html` | 旅行会社向け・幹事ガイド・よくあるご質問 |

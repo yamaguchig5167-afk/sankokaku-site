@@ -20,12 +20,12 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@
          "&amp;family=Shippori+Mincho:wght@500;600&amp;family=DM+Sans:wght@400;500&amp;display=swap")
 
 NAV = [
-    ("index.html#about", "山幸閣について", "ABOUT"),
-    ("education.html", "合宿・団体", "GROUP"),
-    ("training.html", "企業研修", "WORK"),
+    ("travel-agent.html", "旅行会社の方", "AGENTS"),
+    ("guide.html", "幹事・引率の方", "ORGANIZERS"),
+    ("index.html#group", "目的別", "PLANS"),
     ("rooms.html", "客室・施設", "STAY"),
-    ("experiences.html", "白樺湖", "LAKE"),
     ("access.html", "アクセス", "ACCESS"),
+    ("downloads.html", "資料ダウンロード", "DOWNLOADS"),
 ]
 PURPOSE = [
     ("education.html", "学校・教育旅行"),
@@ -35,14 +35,15 @@ PURPOSE = [
     ("ski.html", "スキー・スノーボード"),
     ("touring.html", "バイクツーリング"),
     ("memory.html", "白樺湖メモリアル花火"),
-    ("travel-agent.html", "旅行会社の方へ"),
+    ("experiences.html", "周辺の観光・体験"),
 ]
 GUIDE = [
+    ("downloads.html", "資料ダウンロード"),
+    ("travel-agent.html", "旅行会社の方へ"),
+    ("guide.html", "幹事・引率者ガイド"),
     ("rooms.html", "客室"),
     ("facilities.html", "館内施設"),
     ("maxhub.html", "MAXHUBのある会議室"),
-    ("experiences.html", "周辺の観光・体験"),
-    ("guide.html", "幹事・引率者ガイド"),
     ("faq.html", "よくあるご質問"),
     ("index.html#before", "ご予約前のご確認"),
     ("arrival.html", "ご到着までのご案内"),
@@ -53,7 +54,7 @@ def header(current, solid):
     def cur(href):
         base = href.split("#")[0]
         return ' aria-current="page"' if base == current and "#" not in href else ""
-    nav = "".join(f'<a href="{h}"{cur(h)}>{t}</a>' for h, t, _ in NAV)
+    nav = "".join(f'<a href="{h}"{cur(h)}{" class=\"is-dl\"" if h == "downloads.html" else ""}>{t}</a>' for h, t, _ in NAV)
     main = "".join(f'<li><a href="{h}">{t}<small>{e}</small></a></li>' for h, t, e in NAV)
     purpose = "".join(f'<li><a href="{h}">{t}</a></li>' for h, t in PURPOSE)
     guide = "".join(f'<li><a href="{h}">{t}</a></li>' for h, t in GUIDE)
@@ -111,7 +112,7 @@ def footer():
     <div class="lb-footer__bottom"><small>© Shirakabako Lakeside Hotel Sankokaku.</small><em lang="en">Memories by the Lake.</em></div>
   </div>
 </footer>
-<div class="sticky-cta" aria-label="お問い合わせ"><a class="sc-tel" href="tel:{TEL}" data-ev="tel_click">電話で相談</a><a class="sc-form" href="contact.html" data-ev="inquiry_cta_click">空室・見積り相談</a></div>
+<div class="sticky-cta" aria-label="お問い合わせ"><a class="sc-dl" href="downloads.html" data-ev="downloads_click">資料</a><a class="sc-tel" href="tel:{TEL}" data-ev="tel_click">電話</a><a class="sc-form" href="contact.html" data-ev="inquiry_cta_click">空室・見積り相談</a></div>
 <!-- /LB:FOOTER -->"""
 
 

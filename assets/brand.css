@@ -115,6 +115,12 @@ textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
 .lb-nav a{position:relative;font-size:.86rem;letter-spacing:.1em;color:#fff;padding:.4rem 0;text-decoration:none;white-space:nowrap}
 .lb-nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
 .lb-nav a:hover::after,.lb-nav a[aria-current="page"]::after{transform:scaleX(1)}
+/* 資料ダウンロードは枠付きで目立たせる */
+.lb-nav a.is-dl{padding:.5rem .9rem;border:1px solid rgba(255,255,255,.7)}
+.lb-nav a.is-dl::after{display:none}
+.lb-nav a.is-dl:hover{background:#fff;color:var(--forest)}
+.lb-header.is-scrolled .lb-nav a.is-dl,.lb-header.is-solid .lb-nav a.is-dl{border-color:var(--forest)}
+.lb-header.is-scrolled .lb-nav a.is-dl:hover,.lb-header.is-solid .lb-nav a.is-dl:hover{background:var(--forest);color:var(--ivory)}
 .lb-header__cta{min-height:44px;padding:.6rem 1.3rem;font-size:.84rem;background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
 .lb-header__cta:hover{background:#fff;color:var(--forest);border-color:#fff}
 .lb-header.is-scrolled .lb-brand,.lb-header.is-solid .lb-brand,
@@ -147,14 +153,14 @@ body.has-solid-header{padding-top:84px}
 .lb-menu__hours{font-size:.78rem;color:rgba(245,242,234,.72)}
 html.menu-open,html.menu-open body{overflow:hidden}
 
-@media (max-width:1080px){
+@media (max-width:1180px){
   .lb-nav,.lb-header__cta{display:none}
   .lb-menu-btn{display:inline-flex}
   .lb-header__inner{height:72px}
   .lb-header.is-scrolled .lb-header__inner{height:64px}
   body.has-solid-header{padding-top:72px}
 }
-@media (min-width:1081px){.lb-menu{display:none}}
+@media (min-width:1181px){.lb-menu{display:none}}
 
 /* ---------- 5. フッター ---------- */
 .lb-footer{background:var(--forest-deep);color:rgba(245,242,234,.78);padding:clamp(48px,6vw,80px) 0 2rem;font-size:.86rem;text-align:left}
@@ -178,7 +184,8 @@ html.menu-open,html.menu-open body{overflow:hidden}
 @media (max-width:768px){
   .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:300;box-shadow:0 -1px 0 var(--line),0 -8px 24px -12px rgba(0,0,0,.25);padding-bottom:env(safe-area-inset-bottom);background:var(--forest)}
   .sticky-cta a{flex:1;display:flex;align-items:center;justify-content:center;gap:.4rem;min-height:56px;padding:.8rem .5rem;font-family:var(--f-sans-jp);font-weight:500;font-size:.9rem;letter-spacing:.06em;text-decoration:none}
-  .sticky-cta .sc-tel{background:var(--warm-white);color:var(--forest);border-top:1px solid var(--line)}
+  .sticky-cta .sc-tel,.sticky-cta .sc-dl{background:var(--warm-white);color:var(--forest);border-top:1px solid var(--line);flex:0 0 22%}
+  .sticky-cta .sc-dl{border-right:1px solid var(--line)}
   .sticky-cta .sc-form{background:var(--forest);color:var(--ivory)}
   body{padding-bottom:56px}
   html.menu-open .sticky-cta{display:none}
@@ -232,6 +239,20 @@ section.facilities,section.facil,section.exp,section.equip,section.dine,section.
 .lb-prebook ul{padding-left:1.2em;margin:0 0 .6rem}
 .lb-prebook li{margin:.15rem 0}
 .lb-prebook a{color:var(--forest);text-decoration:underline;text-underline-offset:3px}
+
+/* 資料ダウンロードの帯（目的別ページ・旅行会社・幹事ガイドの下部） */
+.lb-dlband{background:var(--forest);color:var(--ivory);padding-block:clamp(36px,5vw,64px)}
+.lb-dlband__in{width:min(980px,100% - 40px);margin-inline:auto;display:grid;grid-template-columns:minmax(0,150px) 1fr;gap:clamp(18px,4vw,44px);align-items:center}
+.lb-dlband__thumb img{display:block;width:100%;height:auto;box-shadow:0 12px 30px -14px rgba(0,0,0,.6)}
+.lb-dlband__en{font-family:var(--f-sans-en);font-size:.66rem;letter-spacing:.26em;color:var(--brass)}
+.lb-dlband__h{font-family:var(--f-serif-jp);font-weight:500;font-size:clamp(1.15rem,2.4vw,1.5rem);letter-spacing:.08em;line-height:1.6;margin:.4rem 0 .5rem}
+.lb-dlband__t{font-size:.88rem;line-height:1.9;color:rgba(245,242,234,.88)}
+.lb-dlband__btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.1rem}
+.lb-dlband .lb-btn{background:var(--ivory);color:var(--forest);border-color:var(--ivory)}
+.lb-dlband .lb-btn:hover{background:transparent;color:var(--ivory)}
+.lb-dlband .lb-btn--line{background:transparent;color:var(--ivory);border-color:rgba(245,242,234,.7)}
+.lb-dlband .lb-btn--line:hover{background:var(--ivory);color:var(--forest)}
+@media (max-width:560px){.lb-dlband__in{grid-template-columns:1fr}.lb-dlband__thumb img{max-width:120px}.lb-dlband__btns .lb-btn{flex:1 1 100%}}
 
 /* ---------- 9. 動きを控えたい方へ ---------- */
 @media (prefers-reduced-motion:reduce){
