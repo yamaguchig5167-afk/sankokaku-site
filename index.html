@@ -57,7 +57,9 @@ img{display:block;width:100%;height:auto}
 .hero__media img,.hero__media video{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,28,22,.66) 0%,rgba(12,28,22,.42) 34%,rgba(12,28,22,.06) 66%,rgba(12,28,22,0) 100%),linear-gradient(180deg,rgba(12,28,22,.4) 0%,rgba(12,28,22,0) 22%,rgba(12,28,22,0) 58%,rgba(12,28,22,.6) 100%)}
 @media (max-width:760px){.hero::after{background:linear-gradient(180deg,rgba(12,28,22,.45) 0%,rgba(12,28,22,.2) 30%,rgba(12,28,22,.55) 62%,rgba(12,28,22,.85) 100%)}}
-.hero__content{position:relative;z-index:2;padding-bottom:clamp(72px,11vh,120px)}
+/* 画面の高さが低いときも、見出しがヘッダーの下にもぐらないよう上に余白を確保する */
+.hero__content{position:relative;z-index:2;padding-top:clamp(104px,15vh,150px);padding-bottom:clamp(72px,11vh,120px)}
+.hero__badge{display:inline-block;font-family:var(--f-serif-jp);font-weight:600;font-size:clamp(1rem,1.6vw,1.25rem);letter-spacing:.22em;line-height:1;color:var(--forest);background:var(--ivory);padding:.7rem 1.1rem .7rem 1.3rem;margin-bottom:1.3rem;animation:rise .7s var(--ease) both}
 .hero__eyebrow{font-family:var(--f-sans-en);font-size:.72rem;letter-spacing:.34em;color:var(--ivory);opacity:.9}
 .hero__title{font-family:var(--f-serif-jp);font-weight:500;font-size:clamp(2.35rem,6.6vw,5.4rem);line-height:1.42;letter-spacing:.12em;margin:1.4rem 0 1.6rem;text-shadow:0 2px 24px rgba(0,0,0,.25)}
 .hero__sub{font-size:clamp(.95rem,1.35vw,1.08rem);line-height:2.05;letter-spacing:.08em;max-width:32em;color:rgba(245,242,234,.92)}
@@ -316,6 +318,7 @@ img{display:block;width:100%;height:auto}
 <header class="lb-header" id="header">
   <div class="lb-header__inner">
     <a href="index.html" class="lb-brand"><span class="lb-brand__jp">山幸閣</span><span class="lb-brand__en">Shirakabako Lakeside Hotel</span></a>
+    <span class="lb-tag">団体・合宿専用</span>
     <nav class="lb-nav" aria-label="メインメニュー"><a href="travel-agent.html">旅行会社の方</a><a href="guide.html">幹事・引率の方</a><a href="index.html#group">目的別</a><a href="rooms.html">客室・施設</a><a href="access.html">アクセス</a><a href="downloads.html" class="is-dl">資料ダウンロード</a></nav>
     <a href="contact.html" class="lb-btn lb-header__cta" data-ev="inquiry_cta_click">空室・見積り相談</a>
     <button type="button" class="lb-menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu"><span class="lb-menu-btn__bars" aria-hidden="true"></span><span>MENU</span></button>
@@ -323,7 +326,7 @@ img{display:block;width:100%;height:auto}
 </header>
 <div class="lb-menu" id="menu" role="dialog" aria-modal="true" aria-label="メニュー" tabindex="-1" hidden>
   <div class="lb-menu__top">
-    <a href="index.html" class="lb-brand"><span class="lb-brand__jp">山幸閣</span><span class="lb-brand__en">Shirakabako Lakeside Hotel</span></a>
+    <a href="index.html" class="lb-brand"><span class="lb-brand__jp">山幸閣</span><span class="lb-brand__en">団体・合宿専用のご案内</span></a>
     <button type="button" class="lb-menu__close" data-menu-close><span aria-hidden="true">×</span>CLOSE</button>
   </div>
   <div class="lb-menu__body">
@@ -347,9 +350,10 @@ img{display:block;width:100%;height:auto}
     <img src="assets/PhotoGallery-10.webp" srcset="assets/PhotoGallery-10-720.webp 720w, assets/PhotoGallery-10-960.webp 960w, assets/PhotoGallery-10.webp 1440w" sizes="100vw" width="1440" height="960" alt="夏の白樺湖と蓼科山を望む高原の眺め" fetchpriority="high" decoding="async">
   </div>
   <div class="hero__content lb-container">
-    <p class="hero__eyebrow">団体・合宿専用のご案内　｜　SHIRAKABAKO / NAGANO</p>
+    <p class="hero__badge">団体・合宿専用</p>
+    <p class="hero__eyebrow">SHIRAKABAKO / NAGANO</p>
     <h1 class="hero__title" id="hero-title">集まる時間を、<br>旅にする。</h1>
-    <p class="hero__sub">標高1,400m、白樺湖のほとりにある<br>合宿・団体のための宿です。</p>
+    <p class="hero__sub">標高1,400m、白樺湖のほとり。<br>団体・合宿のお客様のための宿です。</p>
     <p class="hero__en" lang="en">Memories by the Lake.</p>
     <div class="hero__cta">
       <a class="lb-btn" href="contact.html" data-ev="inquiry_cta_click">団体・合宿を相談する</a>
@@ -365,9 +369,9 @@ img{display:block;width:100%;height:auto}
     <div class="sec-intro sec-intro--split">
       <div>
         <p class="lb-eyebrow">FOR GROUPS</p>
-        <h2 class="lb-h2" id="gate-title">団体・合宿のための<br>ご案内サイトです。</h2>
+        <h2 class="lb-h2" id="gate-title">団体・合宿専用の<br>ご案内サイトです。</h2>
       </div>
-      <p class="lb-lead">団体でのご宿泊を検討されている、旅行会社の方と、幹事・引率の方に向けてまとめました。必要な情報と資料へ、ここから進めます。</p>
+      <p class="lb-lead">山幸閣は、団体と合宿のお客様を中心にお迎えしている宿です。このサイトは、旅行会社の方と、幹事・引率の方に向けてまとめました。必要な情報と資料へ、ここから進めます。</p>
     </div>
     <div class="gate__grid">
       <a class="gate__card reveal" href="travel-agent.html">
@@ -709,7 +713,7 @@ img{display:block;width:100%;height:auto}
   <div class="lb-container">
     <div class="lb-footer__grid">
       <div class="lb-footer__brand">
-        <p class="lb-footer__concept">Sankokaku — Lake Base Shirakabako</p>
+        <p class="lb-footer__concept">団体・合宿専用のご案内サイト</p>
         <p class="lb-footer__name">白樺湖レイクサイドホテル<br>山幸閣</p>
         <address>〒391-0301 長野県茅野市北山3418-32<br>TEL <a href="tel:0266-68-2021" data-ev="tel_click">0266-68-2021</a>（受付 9:00〜21:00）<br>FAX 0266-68-2092</address>
       </div>

@@ -105,13 +105,17 @@ textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
 
 /* ---------- 4. ヘッダー ---------- */
 .lb-header{position:fixed;inset:0 0 auto 0;z-index:200;display:block;padding:0;background:transparent;border:0;box-shadow:none;transition:background .45s var(--ease),box-shadow .45s var(--ease),backdrop-filter .45s}
-.lb-header__inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;height:84px;padding-inline:var(--gutter);transition:height .45s var(--ease)}
+.lb-header__inner{display:flex;align-items:center;justify-content:space-between;gap:clamp(.8rem,1.6vw,2rem);height:84px;padding-inline:var(--gutter);transition:height .45s var(--ease)}
 .lb-header.is-scrolled,.lb-header.is-solid{background:rgba(250,249,246,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
 .lb-header.is-scrolled .lb-header__inner{height:68px}
 .lb-brand{display:flex;flex-direction:column;line-height:1.15;color:#fff;text-decoration:none;flex-shrink:0}
 .lb-brand__jp{font-family:var(--f-serif-jp);font-weight:600;font-size:1.2rem;letter-spacing:.18em}
 .lb-brand__en{font-family:var(--f-sans-en);font-size:.56rem;letter-spacing:.3em;text-transform:uppercase;margin-top:.4rem;opacity:.9}
-.lb-nav{display:flex;align-items:center;gap:clamp(1.1rem,2vw,2.2rem);margin-left:auto}
+/* 団体・合宿専用の表示（全ページのヘッダー） */
+.lb-tag{flex-shrink:0;font-family:var(--f-serif-jp);font-weight:600;font-size:.84rem;letter-spacing:.14em;line-height:1;color:var(--forest);background:var(--ivory);border:1px solid var(--ivory);padding:.5rem .8rem;white-space:nowrap}
+.lb-header.is-scrolled .lb-tag,.lb-header.is-solid .lb-tag{background:var(--forest);color:var(--ivory);border-color:var(--forest)}
+@media (max-width:420px){.lb-tag{font-size:.74rem;padding:.42rem .55rem;letter-spacing:.08em}.lb-brand__en{display:none}}
+.lb-nav{display:flex;align-items:center;gap:clamp(.9rem,1.5vw,2rem);margin-left:auto}
 .lb-nav a{position:relative;font-size:.86rem;letter-spacing:.1em;color:#fff;padding:.4rem 0;text-decoration:none;white-space:nowrap}
 .lb-nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
 .lb-nav a:hover::after,.lb-nav a[aria-current="page"]::after{transform:scaleX(1)}
@@ -127,7 +131,7 @@ textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
 .lb-header.is-scrolled .lb-nav a,.lb-header.is-solid .lb-nav a{color:var(--forest)}
 .lb-header.is-scrolled .lb-header__cta,.lb-header.is-solid .lb-header__cta{background:var(--forest);color:var(--ivory);border-color:var(--forest)}
 .lb-header.is-scrolled .lb-header__cta:hover,.lb-header.is-solid .lb-header__cta:hover{background:transparent;color:var(--forest)}
-.lb-menu-btn{display:none;align-items:center;gap:.7rem;min-width:48px;min-height:48px;padding:0 .2rem;background:none;border:0;color:#fff;cursor:pointer;font-family:var(--f-sans-en);font-size:.68rem;letter-spacing:.24em}
+.lb-menu-btn{margin-left:auto;display:none;align-items:center;gap:.7rem;min-width:48px;min-height:48px;padding:0 .2rem;background:none;border:0;color:#fff;cursor:pointer;font-family:var(--f-sans-en);font-size:.68rem;letter-spacing:.24em}
 .lb-menu-btn__bars{position:relative;width:24px;height:10px;display:inline-block}
 .lb-menu-btn__bars::before,.lb-menu-btn__bars::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor}
 .lb-menu-btn__bars::before{top:0}.lb-menu-btn__bars::after{bottom:0}
@@ -153,21 +157,21 @@ body.has-solid-header{padding-top:84px}
 .lb-menu__hours{font-size:.78rem;color:rgba(245,242,234,.72)}
 html.menu-open,html.menu-open body{overflow:hidden}
 
-@media (max-width:1180px){
+@media (max-width:1280px){
   .lb-nav,.lb-header__cta{display:none}
   .lb-menu-btn{display:inline-flex}
   .lb-header__inner{height:72px}
   .lb-header.is-scrolled .lb-header__inner{height:64px}
   body.has-solid-header{padding-top:72px}
 }
-@media (min-width:1181px){.lb-menu{display:none}}
+@media (min-width:1281px){.lb-menu{display:none}}
 
 /* ---------- 5. フッター ---------- */
 .lb-footer{background:var(--forest-deep);color:rgba(245,242,234,.78);padding:clamp(48px,6vw,80px) 0 2rem;font-size:.86rem;text-align:left}
 .lb-footer a{color:rgba(245,242,234,.82);text-decoration:none;transition:color .3s}
 .lb-footer a:hover{color:var(--brass)}
 .lb-footer__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:clamp(1.6rem,3vw,3rem);padding-bottom:2.2rem;border-bottom:1px solid var(--line-light)}
-.lb-footer__concept{font-family:var(--f-sans-en);font-size:.64rem;letter-spacing:.28em;color:var(--brass);text-transform:uppercase}
+.lb-footer__concept{display:inline-block;font-family:var(--f-serif-jp);font-size:.84rem;letter-spacing:.14em;color:var(--ivory);border:1px solid rgba(245,242,234,.5);padding:.4rem .8rem}
 .lb-footer__name{font-family:var(--f-serif-jp);font-size:1.3rem;letter-spacing:.14em;color:var(--ivory);margin:1rem 0 1.4rem;line-height:1.7}
 .lb-footer address{font-style:normal;line-height:2.1;color:rgba(245,242,234,.78)}
 .lb-footer address a,.lb-note a,.lb-lead a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}

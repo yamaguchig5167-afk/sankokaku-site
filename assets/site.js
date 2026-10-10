@@ -45,7 +45,7 @@
       }
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 1180 && !menu.hidden) setOpen(false);
+      if (window.innerWidth > 1280 && !menu.hidden) setOpen(false);
     });
   }
 

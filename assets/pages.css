@@ -31,11 +31,11 @@ header.scrolled .btn-reserve:hover{background:var(--ember);border-color:var(--em
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:120}
 .hamburger span{width:26px;height:1.5px;background:#fff;transition:.3s}header.scrolled .hamburger span{background:var(--ink)}
 /* ヒーロー */
-.hero{height:70vh;min-height:460px;position:relative;overflow:hidden;display:flex;align-items:center}
+.hero{min-height:max(70vh,460px);position:relative;overflow:hidden;display:flex;align-items:center}
 .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);animation:kb 16s ease-out forwards}
 @keyframes kb{to{transform:scale(1)}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,20,26,.8) 0%,rgba(12,20,26,.5) 55%,rgba(12,20,26,.18) 100%)}
-.hero .hc{position:relative;z-index:2;color:#fff;padding-top:3rem}
+.hero .hc{position:relative;z-index:2;color:#fff;padding-top:clamp(112px,16vh,150px);padding-bottom:clamp(40px,6vh,72px)}
 .crumb{font-family:var(--label);font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:#e7dfc8;margin-bottom:1.2rem}.crumb a{opacity:.8}
 .hero h1{font-family:var(--serif-jp);font-weight:600;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:.1em;line-height:1.5;text-shadow:0 2px 30px rgba(0,0,0,.4)}
 .hero h1 small{display:block;font-size:.36em;letter-spacing:.18em;margin-top:1.1rem;font-weight:400;opacity:.92;font-family:var(--sans-jp)}
