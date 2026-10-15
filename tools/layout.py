@@ -63,7 +63,7 @@ def header(current, solid):
 <a class="skip-link" href="#main">本文へスキップ</a>
 <header class="{cls}" id="header">
   <div class="lb-header__inner">
-    <a href="index.html" class="lb-brand"><span class="lb-brand__jp">山幸閣</span><span class="lb-brand__en">Shirakabako Lakeside Hotel</span></a>
+    <a href="index.html" class="lb-brand"><span class="lb-brand__jp">山の宿</span> <span class="lb-brand__name"><span class="lb-brand__long">白樺湖レイクサイドホテル </span>山幸閣</span></a>
     <span class="lb-tag">団体・合宿専用</span>
     <nav class="lb-nav" aria-label="メインメニュー">{nav}</nav>
     <a href="contact.html" class="lb-btn lb-header__cta" data-ev="inquiry_cta_click">空室・見積り相談</a>
@@ -72,7 +72,7 @@ def header(current, solid):
 </header>
 <div class="lb-menu" id="menu" role="dialog" aria-modal="true" aria-label="メニュー" tabindex="-1" hidden>
   <div class="lb-menu__top">
-    <a href="index.html" class="lb-brand"><span class="lb-brand__jp">山幸閣</span><span class="lb-brand__en">団体・合宿専用のご案内</span></a>
+    <a href="index.html" class="lb-brand"><span class="lb-brand__jp">山の宿</span> <span class="lb-brand__name"><span class="lb-brand__long">白樺湖レイクサイドホテル </span>山幸閣</span></a>
     <button type="button" class="lb-menu__close" data-menu-close><span aria-hidden="true">×</span>CLOSE</button>
   </div>
   <div class="lb-menu__body">
@@ -98,7 +98,7 @@ def footer():
     <div class="lb-footer__grid">
       <div class="lb-footer__brand">
         <p class="lb-footer__concept">団体・合宿専用のご案内サイト</p>
-        <p class="lb-footer__name">白樺湖レイクサイドホテル<br>山幸閣</p>
+        <p class="lb-footer__name"><span class="lb-footer__yado">山の宿</span> 白樺湖レイクサイドホテル 山幸閣</p>
         <address>〒391-0301 長野県茅野市北山3418-32<br>TEL <a href="tel:{TEL}" data-ev="tel_click">{TEL}</a>（受付 9:00〜21:00）<br>FAX 0266-68-2092</address>
       </div>
       <div class="lb-footer__col"><p class="lb-footer__h">Find your stay</p><ul>{purpose}</ul></div>
