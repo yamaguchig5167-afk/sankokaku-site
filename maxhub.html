@@ -65,15 +65,15 @@ header.scrolled .hamburger span{background:var(--ink)}
 
 /* ヒーロー */
 .hero{height:88vh;min-height:560px;position:relative;overflow:hidden;display:flex;align-items:center}
-.hero .bg{position:absolute;inset:0;background:url('assets/PhotoGallery-7.webp') center/cover no-repeat;transform:scale(1.06);animation:kb 16s ease-out forwards}
+.hero .bg{position:absolute;inset:0;background:url('assets/maxhub-room-1200.webp') 62% 45%/cover no-repeat;transform:scale(1.06);animation:kb 16s ease-out forwards}
 @keyframes kb{to{transform:scale(1)}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,20,26,.82) 0%,rgba(12,20,26,.5) 50%,rgba(12,20,26,.2) 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,20,26,.88) 0%,rgba(12,20,26,.76) 48%,rgba(12,20,26,.3) 68%,rgba(12,20,26,.04) 86%)}
 .hero .hc{position:relative;z-index:2;color:#fff;padding-top:3rem}
 .crumb{font-family:var(--label);font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:#e7dfc8;margin-bottom:1.4rem;opacity:0;animation:fu 1s .2s forwards}
 .crumb a{color:#e7dfc8;opacity:.8}
 .hero .badge{display:inline-block;background:var(--ember);color:#fff;font-family:var(--label);font-size:.66rem;letter-spacing:.2em;padding:.45rem 1rem;text-transform:uppercase;margin-bottom:1.6rem;opacity:0;animation:fu 1s .35s forwards}
 .hero h1{font-family:var(--serif-jp);font-weight:600;font-size:clamp(2rem,5vw,3.7rem);letter-spacing:.09em;line-height:1.55;text-shadow:0 2px 30px rgba(0,0,0,.4);opacity:0;animation:fu 1.2s .5s forwards}
-.hero h1 small{display:block;font-size:.36em;letter-spacing:.22em;margin-top:1.3rem;font-weight:400;opacity:.92}
+.hero h1 small{display:block;font-size:.36em;letter-spacing:.22em;margin-top:1.3rem;font-weight:400;opacity:.92;text-shadow:0 1px 12px rgba(0,0,0,.7);max-width:30rem}
 .hero .heq{font-family:var(--serif-en);font-style:italic;font-size:clamp(1rem,2vw,1.4rem);color:#e7dfc8;margin-top:1.2rem;opacity:0;animation:fu 1.2s .8s forwards}
 @keyframes fu{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 
@@ -193,7 +193,7 @@ footer{background:#10231c;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 }
 @media(max-width:520px){.feat-grid{grid-template-columns:1fr}}
 </style>
-<link rel="preload" as="image" href="assets/PhotoGallery-7-960.webp" media="(max-width:760px)" fetchpriority="high" class="hero-preload"><link rel="preload" as="image" href="assets/PhotoGallery-7.webp" media="(min-width:761px)" fetchpriority="high"><style>@media(max-width:760px){.hero .bg{background-image:url('assets/PhotoGallery-7-960.webp')!important}}</style>
+<link rel="preload" as="image" href="assets/maxhub-room-960.webp" media="(max-width:760px)" fetchpriority="high" class="hero-preload"><link rel="preload" as="image" href="assets/maxhub-room-1200.webp" media="(min-width:761px)" fetchpriority="high"><style>@media(max-width:760px){.hero .bg{background-image:url('assets/maxhub-room-960.webp')!important;background-position:80% 40%!important}.hero::after{background:linear-gradient(180deg,rgba(12,20,26,.55) 0%,rgba(12,20,26,.78) 100%)!important}}</style>
 <link rel="stylesheet" href="assets/brand.css">
 <script>document.documentElement.classList.add('js')</script>
 <meta name="theme-color" content="#183229">
@@ -231,12 +231,12 @@ footer{background:#10231c;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
 <main id="main">
 
 <!-- ヒーロー -->
-<section class="hero"><p style="position:absolute;right:1.2rem;bottom:.8rem;z-index:3;margin:0;font-size:.68rem;color:rgba(255,255,255,.75);letter-spacing:.02em">ロビー・フロント</p>
+<section class="hero"><p style="position:absolute;right:1.2rem;bottom:.8rem;z-index:3;margin:0;font-size:.68rem;color:rgba(255,255,255,.75);letter-spacing:.02em">MAXHUBの設置イメージ（画像提供：ナイスモバイル株式会社）</p>
   <div class="bg"></div>
   <div class="hc wrap">
     <div class="crumb"><a href="index.html">TOP</a> ／ Smart Meeting Room</div>
     <span class="badge">MAXHUB 完備</span>
-    <h1>白樺湖で、<br>成果の出る合宿を。<small>オールインワン会議システム「MAXHUB 55型」完備のミーティングルーム</small></h1>
+    <h1>白樺湖で、<br>成果の出る合宿を。<small>オールインワン会議システム<br>「MAXHUB 55型」完備のミーティングルーム</small></h1>
     <div class="heq">— where teams gather, learn and grow —</div>
   </div>
 </section>
@@ -353,8 +353,8 @@ footer{background:#10231c;color:#9ba39f;padding:4.5rem 0 2rem;font-size:.82rem}
     </div>
     <div class="place-grid">
       <div class="pcard">
-        <div class="ph"><img src="assets/mh-room.webp" width="800" height="534" loading="lazy" alt="MAXHUBを壁に設置した会議室の設置例"></div>
-        <div class="bd"><h3>ミーティングルーム</h3><p style="font-size:.72rem;color:#8a857b;margin-bottom:.4rem">写真はMAXHUBの設置例です（画像提供：ナイスモバイル株式会社）。</p><p>合宿のミーティング・研修・発表会の中心に。大広間・コンベンションホールと合わせ、大人数の団体にも対応します。</p></div>
+        <div class="ph" style="background:#fff"><img src="assets/maxhub-board-1000.webp" width="1000" height="667" loading="lazy" decoding="async" alt="MAXHUB オールインワン会議システム" style="object-fit:contain"></div>
+        <div class="bd"><h3>ミーティングルーム</h3><p style="font-size:.72rem;color:#8a857b;margin-bottom:.4rem">写真はMAXHUBの製品画像です（画像提供：ナイスモバイル株式会社）。</p><p>合宿のミーティング・研修・発表会の中心に。大広間・コンベンションホールと合わせ、大人数の団体にも対応します。</p></div>
       </div>
       <div class="pcard">
         <div class="ph"><img loading="lazy" decoding="async" src="assets/PhotoGallery-7.webp" srcset="assets/PhotoGallery-7-800.webp 800w, assets/PhotoGallery-7.webp 1440w" sizes="(max-width:760px) 100vw, 50vw" alt="ロビー"></div>
