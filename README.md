@@ -37,7 +37,7 @@ python tools/layout.py
 - 画像は `assets/` に WebP で保持（主要写真は 800／960／1440px の srcset）
 
 ## 公開URL
-https://yamaguchig5167-afk.github.io/sankokaku-site/
+https://sankokaku-group.com/
 
 ### 公開先と独自ドメイン（Vercel・sankokaku-group.com）
 団体・合宿向けのこのサイトは、宿研の旧公式サイト（sankokaku.com・個人向け・2027年4月終了予定）とは別サイト。

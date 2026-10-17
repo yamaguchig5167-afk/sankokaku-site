@@ -6,4 +6,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yamaguchig5167-afk.github.io/sankokaku-site/sitemap.xml
+Sitemap: https://sankokaku-group.com/sitemap.xml
