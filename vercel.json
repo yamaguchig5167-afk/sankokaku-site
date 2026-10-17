@@ -36,6 +36,11 @@
       "source": "/assets/docs/sankokaku-activities-guide-6p.pdf",
       "destination": "/downloads.html",
       "permanent": false
+    },
+    {
+      "source": "/assets/docs/sankokaku-travel-agent-4p.pdf",
+      "destination": "/downloads.html",
+      "permanent": false
     }
   ],
   "headers": [
