@@ -39,15 +39,21 @@ python tools/layout.py
 ## 公開URL
 https://yamaguchig5167-afk.github.io/sankokaku-site/
 
-### 独自ドメイン（sankokaku-group.jp）への切り替え
+### 公開先と独自ドメイン（Vercel・sankokaku-group.com）
 団体・合宿向けのこのサイトは、宿研の旧公式サイト（sankokaku.com・個人向け・2027年4月終了予定）とは別サイト。
-独自ドメイン `sankokaku-group.jp`（ソルエイト名義で取得）で公開する。手順の詳細は 案件/山幸閣_独自ドメイン/sankokaku-group.jp_取得と設定の手順_内部メモ.md。
+他のお客様サイト（NEXEL GARAGE）と同じく **Vercel で配信し、ドメインも Vercel で購入**する構成にそろえる。
 
-1. sankokaku-group.jp を取得し、DNS に A×4（185.199.108〜111.153）と `www CNAME yamaguchig5167-afk.github.io` を設定
-2. `python tools/go-live.py sankokaku-group.jp` で DNS を確認 → `--apply` で公開（アドレス置き換え・CNAME・https・館内掲示とQRの作り直しまで一括）
+- Vercel プロジェクト：`sankokaku-group`（チーム yamaguchig5167-afks-projects）／仮アドレス https://sankokaku-group.vercel.app（検索除外）
+- 更新の反映：`git push origin main` のあと `vercel deploy --prod --yes`（GitHub 連携なしの CLI デプロイ）
+- 配信しないもの：`.vercelignore`（tools・codex・README 等）
+
+切り替え手順
+1. Vercel の画面で `sankokaku-group.com` を購入（自動更新ON）。**Vercel はエージェントによる代理購入を受け付けない**ので人の操作。
+2. `python tools/go-live.py sankokaku-group.com` で確認 → `--apply` で一括公開
+   （ドメインと www の紐付け・アドレス置換・github.io を新ドメインへ転送する docs/ 生成と Pages 公開元の切替・デプロイ・館内掲示とQRの作り直し・表示確認）
 3. Search Console に新アドレスを登録（Googleアカウントでの操作）
 
-**DNS より先に CNAME を公開しない。** github.io のアドレスも見られなくなる（go-live.py は DNS 未設定なら止まる）。
+github.io の旧アドレスは、切り替え後は docs/ の転送ページで新ドメインへ案内する（配布済みQR対策）。
 旧サイトのアドレスからの転送ページ（tools/old-redirects.py）は、将来 sankokaku.com をこのサイトへ向けた場合に働く。その際、フッターとトップの「個人は公式サイトへ」のリンクは見直す。
 
 ## ローカルプレビュー
