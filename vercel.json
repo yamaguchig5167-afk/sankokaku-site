@@ -7,27 +7,62 @@
   "redirects": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "www.sankokaku-group.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.sankokaku-group.com"
+        }
+      ],
       "destination": "https://sankokaku-group.com/",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.sankokaku-group.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.sankokaku-group.com"
+        }
+      ],
       "destination": "https://sankokaku-group.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/assets/docs/sankokaku-activities-guide-5p.pdf",
+      "destination": "/assets/docs/sankokaku-activities-guide-6p.pdf",
       "permanent": true
     }
   ],
   "headers": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "(?<sub>.*)\\.vercel\\.app" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<sub>.*)\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "(?<sub>.*)\\.vercel\\.app" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<sub>.*)\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     }
   ]
 }
