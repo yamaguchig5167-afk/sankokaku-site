@@ -4,6 +4,14 @@
   "buildCommand": "",
   "installCommand": "",
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.sankokaku-group.com" }],
+      "destination": "https://sankokaku-group.com/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/",
