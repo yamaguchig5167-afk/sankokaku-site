@@ -7,4 +7,4 @@ CHECKLIST.md
 .nojekyll
 .env*
 .vercel
-docs/
+/docs/
