@@ -6,6 +6,12 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.sankokaku-group.com" }],
+      "destination": "https://sankokaku-group.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.sankokaku-group.com" }],
       "destination": "https://sankokaku-group.com/:path*",
