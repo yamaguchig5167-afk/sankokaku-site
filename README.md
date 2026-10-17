@@ -39,15 +39,16 @@ python tools/layout.py
 ## 公開URL
 https://yamaguchig5167-afk.github.io/sankokaku-site/
 
-### 独自ドメイン（group.sankokaku.com）への切り替え
-2027年4月までは、個人向け＝宿研の公式サイト（sankokaku.com）、団体向け＝このサイト（group.sankokaku.com）で並行運用する。
+### 独自ドメイン（sankokaku.jp）への切り替え
+団体・合宿向けのこのサイトは、宿研の旧公式サイト（sankokaku.com・個人向け・2027年4月終了予定）とは別サイト。
+独自ドメイン `sankokaku.jp`（ソルエイト名義で取得）で公開する。手順の詳細は 案件/山幸閣_独自ドメイン/sankokaku.jp_取得と設定の手順_内部メモ.md。
 
-1. sankokaku.com の DNS に `group  CNAME  yamaguchig5167-afk.github.io.` を追加してもらう（依頼文面は 案件/山幸閣_独自ドメイン/）
-2. `python tools/go-live.py group.sankokaku.com` で DNS を確認 → `--apply` で公開（アドレス置き換え・CNAME・https・館内掲示とQRの作り直しまで一括）
+1. sankokaku.jp を取得し、DNS に A×4（185.199.108〜111.153）と `www CNAME yamaguchig5167-afk.github.io` を設定
+2. `python tools/go-live.py sankokaku.jp` で DNS を確認 → `--apply` で公開（アドレス置き換え・CNAME・https・館内掲示とQRの作り直しまで一括）
 3. Search Console に新アドレスを登録（Googleアカウントでの操作）
 
 **DNS より先に CNAME を公開しない。** github.io のアドレスも見られなくなる（go-live.py は DNS 未設定なら止まる）。
-2027年4月に sankokaku.com 本体へ移すときは、旧サイトの転送ページ（tools/old-redirects.py で生成済み）が働く。その際、フッターとトップの「個人は公式サイトへ」のリンクは自分を指すので外す。
+旧サイトのアドレスからの転送ページ（tools/old-redirects.py）は、将来 sankokaku.com をこのサイトへ向けた場合に働く。その際、フッターとトップの「個人は公式サイトへ」のリンクは見直す。
 
 ## ローカルプレビュー
 ```bash
