@@ -48,6 +48,8 @@ def main():
                 p.write_text(s.replace(OLD, new), encoding='utf-8')
     print(f'合計 {total} か所 → {new}')
 
+    if apply and '--no-cname' in sys.argv:  # Vercel で公開するとき（CNAME は GitHub Pages 用）
+        return
     if apply:
         (ROOT / 'CNAME').write_text(host + '\n', encoding='utf-8')
         print('CNAME を作成しました。コミットして push したら、GitHub の Pages 設定で "Enforce HTTPS" を有効にしてください。')

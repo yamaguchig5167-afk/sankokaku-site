@@ -1,0 +1,10 @@
+# Vercel に載せないもの（作業用・内部資料）
+codex/
+tools/
+server.js
+README.md
+CHECKLIST.md
+.nojekyll
+.env*
+.vercel
+docs/

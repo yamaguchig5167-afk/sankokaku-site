@@ -1,28 +1,30 @@
 # -*- coding: utf-8 -*-
-"""独自ドメインでの公開を、DNS確認から https 有効化・資料のQR作り直しまで一度に行う。
+"""独自ドメインでの公開（Vercel）を、ドメインの紐付けから資料のQR作り直しまで一度に行う。
+
+前提：ドメインは Vercel のチーム（yamaguchig5167-afks-projects）で購入済み
+      （Vercel は代理購入を受け付けないため、購入は人の操作）。
 
 使い方:
-  python tools/go-live.py group.sankokaku.com           # 確認だけ（何も変えない）
-  python tools/go-live.py group.sankokaku.com --apply   # 実行
+  python tools/go-live.py sankokaku-group.com           # 確認だけ（何も変えない）
+  python tools/go-live.py sankokaku-group.com --apply   # 実行
 
 流れ:
-  1. DNS が GitHub Pages を向いているか確認（向いていなければ中止）
-  2. サイト内のアドレス表記を置き換え、CNAME を作って公開（switch-domain.py）
-  3. GitHub の Pages 設定にドメインを登録し、証明書の発行を待って https を強制
-  4. 館内掲示・旅行会社向けQR・案内文面のアドレスを置き換えて作り直す
-  5. 新アドレスと旧アドレス（github.io からの転送）を実際に開いて確認
+  1. ドメインが Vercel のチームにあるか確認し、プロジェクト sankokaku-group に紐付け（www も）
+  2. サイト内のアドレス表記（canonical・OGP・サイトマップ等）を新ドメインへ置き換え
+  3. github.io の旧アドレスを新ドメインへ転送するページを docs/ に作り、GitHub Pages の公開元を /docs に切り替え
+  4. GitHub へ push し、Vercel へ本番デプロイ
+  5. 館内掲示・旅行会社向けQR・案内文面のアドレスを置き換えて作り直す
+  6. 新アドレスと旧アドレス（github.io からの転送）を実際に開いて確認
 """
-import json
 import pathlib
-import socket
 import subprocess
 import sys
 import time
 import urllib.request
 
 REPO = 'yamaguchig5167-afk/sankokaku-site'
+PROJECT = 'sankokaku-group'
 OLD = 'https://yamaguchig5167-afk.github.io/sankokaku-site/'
-PAGES_IPS = {'185.199.108.153', '185.199.109.153', '185.199.110.153', '185.199.111.153'}
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CASES = pathlib.Path(r'C:\Users\gyama\OneDrive\Desktop\①Claude Code\案件')
 # サイトの外にある、アドレスを書き込んでいる資料（置き換えたあと、括弧内のコマンドで作り直す）
@@ -33,16 +35,17 @@ EXTERNAL = [
 ]
 
 
-def run(cmd, cwd=ROOT):
+def run(cmd, cwd=ROOT, check=True):
     print('  $ ' + ' '.join(cmd))
-    return subprocess.run(cmd, cwd=cwd, check=True, capture_output=True, text=True, encoding='utf-8').stdout
+    r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, encoding='utf-8', shell=(cmd[0] == 'vercel'))
+    out = (r.stdout or '') + (r.stderr or '')
+    if check and r.returncode != 0:
+        print(out)
+        sys.exit(f'  失敗：{" ".join(cmd)}')
+    return out
 
 
-def gh_pages():
-    return json.loads(run(['gh', 'api', f'repos/{REPO}/pages']))
-
-
-def http_ok(url):
+def fetch(url):
     try:
         with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'}), timeout=20) as r:
             return r.status, r.geturl()
@@ -58,40 +61,34 @@ def main():
     new = f'https://{host}/'
     apply = '--apply' in sys.argv
 
-    print('1. DNS の確認')
-    try:
-        ips = {i[4][0] for i in socket.getaddrinfo(host, 443, socket.AF_INET)}
-    except socket.gaierror:
-        sys.exit(f'  {host} はまだ DNS に登録されていません。設定と反映を待ってから実行してください。')
-    print('  ' + ', '.join(sorted(ips)))
-    if not ips <= PAGES_IPS:
-        sys.exit('  GitHub Pages 以外を向いています。DNS の値（CNAME → yamaguchig5167-afk.github.io.）を確認してください。')
-    print('  OK：GitHub Pages を向いています')
+    print('1. ドメインの確認')
+    info = run(['vercel', 'domains', 'inspect', host], check=False)
+    if 'not found' in info.lower() or 'error' in info.lower():
+        print(info.strip()[-400:])
+        sys.exit(f'  {host} が Vercel のチームにありません。Vercel の画面で購入（または追加）してから実行してください。')
+    print('  OK：Vercel のチームにあります')
     if not apply:
         print('（確認のみ。実行するには --apply を付ける）')
         return
 
-    print('2. サイト内のアドレスを置き換えて公開')
-    subprocess.run([sys.executable, str(ROOT / 'tools' / 'switch-domain.py'), host, '--apply'], cwd=ROOT, check=True)
+    for d in (host, 'www.' + host):
+        out = run(['vercel', 'domains', 'add', d, PROJECT], check=False)
+        print('  ' + (out.strip().splitlines() or [''])[-1])
+
+    print('2. サイト内のアドレスを置き換え')
+    subprocess.run([sys.executable, str(ROOT / 'tools' / 'switch-domain.py'), host, '--apply', '--no-cname'], cwd=ROOT, check=True)
+
+    print('3. github.io からの転送ページ')
+    subprocess.run([sys.executable, str(ROOT / 'tools' / 'make-gh-redirect.py'), host], cwd=ROOT, check=True)
+
+    print('4. GitHub へ push と Vercel へデプロイ')
     run(['git', 'add', '-A'])
-    run(['git', 'commit', '-m', f'独自ドメイン {host} で公開\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'])
+    run(['git', 'commit', '-m', f'独自ドメイン {host}（Vercel）で公開し、github.io は新ドメインへ転送\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'])
     run(['git', 'push', 'origin', 'main'])
+    run(['gh', 'api', '-X', 'PUT', f'repos/{REPO}/pages', '-f', 'source[branch]=main', '-f', 'source[path]=/docs'])
+    print(run(['vercel', 'deploy', '--prod', '--yes']).strip().splitlines()[-1])
 
-    print('3. GitHub の Pages 設定と https')
-    run(['gh', 'api', '-X', 'PUT', f'repos/{REPO}/pages', '-f', f'cname={host}'])
-    for i in range(60):  # 証明書の発行は通常数分〜1時間
-        st = (gh_pages().get('https_certificate') or {}).get('state')
-        print(f'  証明書：{st}')
-        if st == 'approved':
-            run(['gh', 'api', '-X', 'PUT', f'repos/{REPO}/pages', '-F', 'https_enforced=true'])
-            print('  https を強制しました')
-            break
-        time.sleep(60)
-    else:
-        print('  証明書がまだ発行されていません。後で「gh api -X PUT repos/%s/pages -F https_enforced=true」を実行してください。' % REPO)
-    run(['git', 'pull', '-q', 'origin', 'main'])
-
-    print('4. 資料のアドレスを置き換えて作り直す')
+    print('5. 資料のアドレスを置き換えて作り直す')
     for path, cmd in EXTERNAL:
         s = path.read_text(encoding='utf-8')
         if OLD in s:
@@ -100,9 +97,11 @@ def main():
         if cmd:
             run(cmd, cwd=path.parent)
 
-    print('5. 表示の確認')
-    for url in (new, new + 'downloads.html', new + 'arrival.html', OLD + 'downloads.html'):
-        print(f'  {url} → {http_ok(url)}')
+    print('6. 表示の確認（GitHub Pages の切り替え反映を待つ）')
+    time.sleep(90)
+    for url in (new, new + 'downloads.html', new + 'arrival.html', 'https://www.' + host + '/', OLD + 'downloads.html', OLD + 'assets/docs/sankokaku-group-guide-20p.pdf'):
+        print(f'  {url} → {fetch(url)}')
+    print('github.io の行は「JS/meta で新ドメインへ移る」ため、ブラウザで開いて新アドレスに着くことも確認する。')
 
 
 if __name__ == '__main__':
