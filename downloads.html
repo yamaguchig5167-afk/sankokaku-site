@@ -47,7 +47,8 @@ img{display:block;max-width:100%;height:auto}
 .doc img{border:1px solid var(--line)}
 .doc b{display:block;font-family:var(--f-serif-jp);font-weight:500;font-size:1.05rem;letter-spacing:.06em;color:var(--forest);line-height:1.6}
 .doc span{display:block;font-size:.84rem;line-height:1.85;margin-top:.3rem}
-.doc .go{display:inline-block;margin-top:.7rem;font-size:.84rem;color:var(--forest);border-bottom:1px solid var(--brass)}
+.doc .go{display:inline-flex;align-items:center;gap:.5rem;margin-top:.8rem;padding:.35rem .9rem;font-size:.84rem;font-weight:500;color:var(--ivory);background:var(--forest);border:1px solid var(--forest);transition:background .25s,color .25s}
+.doc:hover .go{background:#fff;color:var(--forest)}
 .flyers{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);margin-top:1.6rem}
 .fly{display:block;background:var(--warm-white);border:1px solid var(--line);padding:.6rem;transition:border-color .3s}
 .fly:hover{border-color:var(--forest)}

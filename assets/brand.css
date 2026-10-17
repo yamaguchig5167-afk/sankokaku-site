@@ -98,10 +98,24 @@ textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
 .on-dark .lb-btn:hover,.lb-btn--on-dark:hover{background:transparent;color:var(--ivory)}
 .on-dark .lb-btn--line{background:transparent;color:var(--ivory);border-color:rgba(245,242,234,.7)}
 .on-dark .lb-btn--line:hover{background:var(--ivory);color:var(--forest);border-color:var(--ivory)}
-.lb-link{display:inline-flex;align-items:center;gap:.8em;font-size:.9rem;letter-spacing:.08em;color:var(--forest);padding-bottom:.35rem;border-bottom:1px solid var(--brass);transition:gap .35s var(--ease)}
-.lb-link::after{content:"→";font-family:var(--f-sans-en)}
-.lb-link:hover{gap:1.2em}
-.on-dark .lb-link{color:var(--ivory)}
+/* 矢印ボタン（「〜を見る」など、別ページへ進むリンク）
+   線だけの文字リンクは押せる場所だと伝わりにくいため、枠と矢印の丸で「押せる」形にする */
+.lb-link{display:inline-flex;align-items:center;justify-content:space-between;gap:1rem;min-height:48px;padding:.55rem .55rem .55rem 1.2rem;font-family:var(--f-sans-jp);font-size:.92rem;font-weight:500;letter-spacing:.06em;line-height:1.5;color:var(--forest);background:#fff;border:1px solid rgba(24,50,41,.4);text-decoration:none;cursor:pointer;transition:background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease)}
+.lb-link::after{content:"→";flex-shrink:0;display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--forest);color:var(--ivory);font-family:var(--f-sans-en);font-size:.95rem;line-height:1;transition:transform .25s var(--ease),background .25s var(--ease),color .25s var(--ease)}
+.lb-link:hover{background:var(--forest);color:var(--ivory);border-color:var(--forest)}
+.lb-link:hover::after{background:var(--ivory);color:var(--forest);transform:translateX(3px)}
+.lb-link:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.lb-link--down::after{content:"↓"}
+.lb-link--down:hover::after{transform:translateY(3px)}
+.lb-link--ext::after{content:"↗"}
+/* 文中に置く小さいボタン */
+.lb-link--sm{min-height:36px;gap:.6rem;padding:.25rem .3rem .25rem .8rem;font-size:.84rem;vertical-align:middle;margin:.15rem 0}
+.lb-link--sm::after{width:26px;height:26px;font-size:.8rem}
+.on-dark .lb-link{background:transparent;color:var(--ivory);border-color:rgba(245,242,234,.6)}
+.on-dark .lb-link::after{background:var(--ivory);color:var(--forest)}
+.on-dark .lb-link:hover{background:var(--ivory);color:var(--forest);border-color:var(--ivory)}
+.on-dark .lb-link:hover::after{background:var(--forest);color:var(--ivory)}
+@media (max-width:560px){.lb-link:not(.lb-link--sm){display:flex;width:100%}}
 
 /* ---------- 4. ヘッダー ---------- */
 .lb-header{position:fixed;inset:0 0 auto 0;z-index:200;display:block;padding:0;background:transparent;border:0;box-shadow:none;transition:background .45s var(--ease),box-shadow .45s var(--ease),backdrop-filter .45s}

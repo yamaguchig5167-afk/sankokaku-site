@@ -101,6 +101,8 @@ img{display:block;width:100%;height:auto}
 .gate__card li{position:relative;padding:.55rem 0 .55rem 1.1rem;font-size:.88rem;border-bottom:1px solid var(--line)}
 .gate__card li::before{content:"";position:absolute;left:0;top:1.25em;width:6px;height:1px;background:var(--brass-ink)}
 .gate__card .lb-link{margin-top:auto;align-self:flex-start}
+.gate__card:hover .lb-link{background:var(--forest);color:var(--ivory);border-color:var(--forest)}
+.gate__card:hover .lb-link::after{background:var(--ivory);color:var(--forest);transform:translateX(3px)}
 .gate__solo{margin-top:1.2rem}
 .gate__dl{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:clamp(20px,4vw,48px);align-items:center;margin-top:clamp(20px,2.6vw,32px);background:var(--forest);color:var(--ivory);padding:clamp(20px,3vw,40px)}
 .gate__thumb img{box-shadow:0 12px 30px -14px rgba(0,0,0,.6)}
@@ -239,7 +241,7 @@ img{display:block;width:100%;height:auto}
 .rail figcaption .en{font-family:var(--f-sans-en);font-size:.64rem;letter-spacing:.26em;color:var(--brass-ink)}
 .rail figcaption strong{display:block;font-family:var(--f-serif-jp);font-weight:500;font-size:1.12rem;letter-spacing:.1em;color:var(--forest);margin-top:.3rem}
 .rail figcaption span:last-child{display:block;font-size:.84rem;line-height:1.9;color:var(--muted-ink);margin-top:.35rem}
-.facility__links{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;margin-top:clamp(32px,4vw,56px)}
+.facility__links{display:flex;flex-wrap:wrap;gap:.8rem 1rem;margin-top:clamp(32px,4vw,56px)}
 @media (max-width:600px){.rail{grid-auto-columns:80%}.rail-ctrl{display:none}}
 
 /* ---------- AT A GLANCE ---------- */
@@ -265,7 +267,7 @@ img{display:block;width:100%;height:auto}
 .season__en span:last-child{font-size:.76rem;letter-spacing:.08em;color:var(--muted-ink)}
 .season h3{font-family:var(--f-serif-jp);font-weight:500;font-size:.98rem;letter-spacing:.1em;color:var(--forest);margin-top:.9rem}
 .season p{font-size:.84rem;line-height:1.95;color:var(--muted-ink);margin-top:.4rem}
-.season a.lb-link{margin-top:.9rem;font-size:.82rem}
+.season a.lb-link{display:flex;margin-top:.9rem;font-size:.86rem}
 .seasons__foot{margin-top:clamp(28px,3vw,44px);display:flex;justify-content:space-between;gap:1rem 2rem;flex-wrap:wrap;align-items:flex-end}
 .seasons__foot p:first-child{font-family:var(--f-serif-jp);font-size:clamp(1rem,1.6vw,1.2rem);letter-spacing:.1em;color:var(--forest)}
 @media (max-width:960px){.seasons__grid{grid-template-columns:1fr 1fr;gap:40px 18px}}
@@ -688,7 +690,7 @@ img{display:block;width:100%;height:auto}
     <div class="info__side">
       <p class="lb-eyebrow">INFORMATION</p>
       <h2 class="lb-h2" id="info-title">ご案内</h2>
-      <a class="lb-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%95%B7%E9%87%8E%E7%9C%8C%E8%8C%85%E9%87%8E%E5%B8%82%E5%8C%97%E5%B1%B13418-32" target="_blank" rel="noopener">Googleマップで見る</a>
+      <a class="lb-link lb-link--ext" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%95%B7%E9%87%8E%E7%9C%8C%E8%8C%85%E9%87%8E%E5%B8%82%E5%8C%97%E5%B1%B13418-32" target="_blank" rel="noopener">Googleマップで見る</a>
     </div>
     <dl>
       <dt>所在地</dt><dd>〒391-0301 長野県茅野市北山3418-32</dd>
