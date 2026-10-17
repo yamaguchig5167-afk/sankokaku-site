@@ -29,8 +29,13 @@
     },
     {
       "source": "/assets/docs/sankokaku-activities-guide-5p.pdf",
-      "destination": "/assets/docs/sankokaku-activities-guide-6p.pdf",
-      "permanent": true
+      "destination": "/downloads.html",
+      "permanent": false
+    },
+    {
+      "source": "/assets/docs/sankokaku-activities-guide-6p.pdf",
+      "destination": "/downloads.html",
+      "permanent": false
     }
   ],
   "headers": [
