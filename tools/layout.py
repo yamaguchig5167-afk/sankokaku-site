@@ -77,6 +77,7 @@ def header(current, solid):
   </div>
   <div class="lb-menu__body">
     <ul class="lb-menu__main">{main}</ul>
+    <a class="lb-menu__solo" href="https://sankokaku.com/" target="_blank" rel="noopener" data-ev="official_site_click"><small>個人でのご宿泊は</small>山幸閣 公式サイトへ</a>
     <div class="lb-menu__group"><p>Find your stay</p><ul class="lb-menu__sub">{purpose}</ul></div>
     <div class="lb-menu__group"><p>Guide</p><ul class="lb-menu__sub">{guide}</ul></div>
     <div class="lb-menu__contact">
@@ -100,7 +101,7 @@ def footer():
         <p class="lb-footer__concept">団体・合宿専用のご案内サイト</p>
         <p class="lb-footer__name"><span class="lb-footer__yado">山の宿</span> 白樺湖レイクサイドホテル 山幸閣</p>
         <address>〒391-0301 長野県茅野市北山3418-32<br>TEL <a href="tel:{TEL}" data-ev="tel_click">{TEL}</a>（受付 9:00〜21:00）<br>FAX 0266-68-2092</address>
-        <p class="lb-footer__solo">個人でのご宿泊は <a href="https://sankokaku.com/" data-ev="official_site_click">山幸閣 公式サイト</a> へ</p>
+        <p class="lb-footer__solo on-dark"><span>個人でのご宿泊は</span><a class="lb-link lb-link--sm lb-link--ext" href="https://sankokaku.com/" target="_blank" rel="noopener" data-ev="official_site_click">山幸閣 公式サイトへ</a></p>
       </div>
       <div class="lb-footer__col"><p class="lb-footer__h">Find your stay</p><ul>{purpose}</ul></div>
       <div class="lb-footer__col"><p class="lb-footer__h">Guide</p><ul>{guide}</ul></div>

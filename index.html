@@ -68,6 +68,8 @@ img{display:block;width:100%;height:auto}
 .hero__sub{font-size:clamp(.95rem,1.35vw,1.08rem);line-height:2.05;letter-spacing:.08em;max-width:32em;color:rgba(245,242,234,.92)}
 .hero__en{font-family:var(--f-serif-en);font-style:italic;font-size:clamp(1.05rem,1.6vw,1.35rem);letter-spacing:.06em;color:#e3d3b0;margin-top:1rem}
 .hero__cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.4rem}
+.hero__solo{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem .8rem;margin-top:1.3rem;font-size:.88rem;color:rgba(245,242,234,.92);text-shadow:0 1px 8px rgba(0,0,0,.35);animation:rise .7s var(--ease) .5s both}
+.hero__solo .lb-link{text-shadow:none;background:rgba(24,50,41,.35)}
 .hero__scroll{position:absolute;z-index:2;right:var(--gutter);bottom:clamp(88px,13vh,140px);writing-mode:vertical-rl;font-family:var(--f-sans-en);font-size:.62rem;letter-spacing:.34em;color:rgba(245,242,234,.85);display:flex;align-items:center;gap:1rem}
 .hero__scroll::after{content:"";width:1px;height:64px;background:rgba(245,242,234,.6)}
 .hero__eyebrow,.hero__title,.hero__sub,.hero__en,.hero__cta{animation:rise .7s var(--ease) both}
@@ -336,6 +338,7 @@ img{display:block;width:100%;height:auto}
   </div>
   <div class="lb-menu__body">
     <ul class="lb-menu__main"><li><a href="travel-agent.html">旅行会社の方<small>AGENTS</small></a></li><li><a href="guide.html">幹事・引率の方<small>ORGANIZERS</small></a></li><li><a href="index.html#group">目的別<small>PLANS</small></a></li><li><a href="rooms.html">客室・施設<small>STAY</small></a></li><li><a href="access.html">アクセス<small>ACCESS</small></a></li><li><a href="downloads.html">資料ダウンロード<small>DOWNLOADS</small></a></li></ul>
+    <a class="lb-menu__solo" href="https://sankokaku.com/" target="_blank" rel="noopener" data-ev="official_site_click"><small>個人でのご宿泊は</small>山幸閣 公式サイトへ</a>
     <div class="lb-menu__group"><p>Find your stay</p><ul class="lb-menu__sub"><li><a href="education.html">学校・教育旅行</a></li><li><a href="sports.html">スポーツ合宿</a></li><li><a href="music.html">音楽・吹奏楽</a></li><li><a href="training.html">企業研修・ワーケーション</a></li><li><a href="ski.html">スキー・スノーボード</a></li><li><a href="touring.html">バイクツーリング</a></li><li><a href="memory.html">白樺湖メモリアル花火</a></li><li><a href="experiences.html">周辺の観光・体験</a></li></ul></div>
     <div class="lb-menu__group"><p>Guide</p><ul class="lb-menu__sub"><li><a href="downloads.html">資料ダウンロード</a></li><li><a href="travel-agent.html">旅行会社の方へ</a></li><li><a href="guide.html">幹事・引率者ガイド</a></li><li><a href="rooms.html">客室</a></li><li><a href="facilities.html">館内施設</a></li><li><a href="maxhub.html">MAXHUBのある会議室</a></li><li><a href="faq.html">よくあるご質問</a></li><li><a href="index.html#before">ご予約前のご確認</a></li><li><a href="arrival.html">ご到着までのご案内</a></li></ul></div>
     <div class="lb-menu__contact">
@@ -364,6 +367,7 @@ img{display:block;width:100%;height:auto}
       <a class="lb-btn" href="contact.html" data-ev="inquiry_cta_click">団体・合宿を相談する</a>
       <a class="lb-btn lb-btn--line" href="downloads.html" data-ev="downloads_click">資料ダウンロード</a>
     </div>
+    <p class="hero__solo on-dark"><span>個人でのご宿泊の方は</span><a class="lb-link lb-link--sm lb-link--ext" href="https://sankokaku.com/" target="_blank" rel="noopener" data-ev="official_site_click">山幸閣 公式サイトへ</a></p>
   </div>
   <a class="hero__scroll" href="#start">SCROLL</a>
 </section>
@@ -394,7 +398,7 @@ img{display:block;width:100%;height:auto}
         <span class="lb-link">幹事・引率者ガイドへ</span>
       </a>
     </div>
-    <p class="lb-note gate__solo">このサイトは団体・合宿のお客様向けのご案内です。個人でのご宿泊は、<a href="https://sankokaku.com/" data-ev="official_site_click">山幸閣 公式サイト</a>、お電話（<a href="tel:0266-68-2021" data-ev="tel_click">0266-68-2021</a>）、または宿泊予約サイトからご予約ください。その際も、<a href="#before">ご予約前の確認事項</a>をご覧ください。</p>
+    <p class="lb-note gate__solo">このサイトは団体・合宿のお客様向けのご案内です。個人でのご宿泊は、<a href="https://sankokaku.com/" target="_blank" rel="noopener" data-ev="official_site_click">山幸閣 公式サイト</a>、お電話（<a href="tel:0266-68-2021" data-ev="tel_click">0266-68-2021</a>）、または宿泊予約サイトからご予約ください。その際も、<a href="#before">ご予約前の確認事項</a>をご覧ください。</p>
     <div class="gate__dl reveal">
       <a class="gate__thumb" href="assets/docs/sankokaku-group-guide-20p.pdf" target="_blank" rel="noopener" data-ev="doc_download"><img src="assets/docs/guide-20p-thumb.webp" width="480" height="677" alt="団体旅行総合パンフレットの表紙" loading="lazy" decoding="async"></a>
       <div>
@@ -721,7 +725,7 @@ img{display:block;width:100%;height:auto}
         <p class="lb-footer__concept">団体・合宿専用のご案内サイト</p>
         <p class="lb-footer__name"><span class="lb-footer__yado">山の宿</span> 白樺湖レイクサイドホテル 山幸閣</p>
         <address>〒391-0301 長野県茅野市北山3418-32<br>TEL <a href="tel:0266-68-2021" data-ev="tel_click">0266-68-2021</a>（受付 9:00〜21:00）<br>FAX 0266-68-2092</address>
-        <p class="lb-footer__solo">個人でのご宿泊は <a href="https://sankokaku.com/" data-ev="official_site_click">山幸閣 公式サイト</a> へ</p>
+        <p class="lb-footer__solo on-dark"><span>個人でのご宿泊は</span><a class="lb-link lb-link--sm lb-link--ext" href="https://sankokaku.com/" target="_blank" rel="noopener" data-ev="official_site_click">山幸閣 公式サイトへ</a></p>
       </div>
       <div class="lb-footer__col"><p class="lb-footer__h">Find your stay</p><ul><li><a href="education.html">学校・教育旅行</a></li><li><a href="sports.html">スポーツ合宿</a></li><li><a href="music.html">音楽・吹奏楽</a></li><li><a href="training.html">企業研修・ワーケーション</a></li><li><a href="ski.html">スキー・スノーボード</a></li><li><a href="touring.html">バイクツーリング</a></li><li><a href="memory.html">白樺湖メモリアル花火</a></li><li><a href="experiences.html">周辺の観光・体験</a></li></ul></div>
       <div class="lb-footer__col"><p class="lb-footer__h">Guide</p><ul><li><a href="downloads.html">資料ダウンロード</a></li><li><a href="travel-agent.html">旅行会社の方へ</a></li><li><a href="guide.html">幹事・引率者ガイド</a></li><li><a href="rooms.html">客室</a></li><li><a href="facilities.html">館内施設</a></li><li><a href="maxhub.html">MAXHUBのある会議室</a></li><li><a href="faq.html">よくあるご質問</a></li><li><a href="index.html#before">ご予約前のご確認</a></li><li><a href="arrival.html">ご到着までのご案内</a></li></ul></div>
