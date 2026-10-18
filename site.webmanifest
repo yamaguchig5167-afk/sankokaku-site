@@ -1,0 +1,13 @@
+{
+  "name": "山の宿 白樺湖レイクサイドホテル 山幸閣｜団体・合宿専用",
+  "short_name": "山幸閣 団体",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F5F2EA",
+  "theme_color": "#183229",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
