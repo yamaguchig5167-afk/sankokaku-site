@@ -2,3 +2,8 @@
 
 .vercel
 .env*
+
+# 社内用（公開リポに載せない・手元にだけ置く）
+CHECKLIST.md
+codex/
+tools/
